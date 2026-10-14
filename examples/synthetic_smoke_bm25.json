@@ -1,0 +1,74 @@
+{
+  "n_queries": 5,
+  "metrics": {
+    "mrr": 1.0,
+    "recall@1": 1.0,
+    "ndcg@1": 1.0
+  },
+  "per_query": [
+    {
+      "query": "What is the total payable?",
+      "gold": [
+        "6d10f1e584541073d72f"
+      ],
+      "retrieved": [
+        "6d10f1e584541073d72f"
+      ],
+      "mrr": 1.0,
+      "recall@1": 1.0,
+      "ndcg@1": 1.0
+    },
+    {
+      "query": "आवेदन जमा करने की अंतिम तिथि",
+      "gold": [
+        "e3dc285bb8fa0956901b"
+      ],
+      "retrieved": [
+        "e3dc285bb8fa0956901b"
+      ],
+      "mrr": 1.0,
+      "recall@1": 1.0,
+      "ndcg@1": 1.0
+    },
+    {
+      "query": "Where is the meeting?",
+      "gold": [
+        "d7731d451509a2faf6fe"
+      ],
+      "retrieved": [
+        "d7731d451509a2faf6fe"
+      ],
+      "mrr": 1.0,
+      "recall@1": 1.0,
+      "ndcg@1": 1.0
+    },
+    {
+      "query": "What is the invoice number?",
+      "gold": [
+        "6d10f1e584541073d72f"
+      ],
+      "retrieved": [
+        "6d10f1e584541073d72f"
+      ],
+      "mrr": 1.0,
+      "recall@1": 1.0,
+      "ndcg@1": 1.0
+    },
+    {
+      "query": "समीक्षा बैठक कब है?",
+      "gold": [
+        "d7731d451509a2faf6fe"
+      ],
+      "retrieved": [
+        "d7731d451509a2faf6fe"
+      ],
+      "mrr": 1.0,
+      "recall@1": 1.0,
+      "ndcg@1": 1.0
+    }
+  ],
+  "caution": "Only retrieval evaluated; no evidence of answer correctness",
+  "mode": "bm25",
+  "k": 1,
+  "corpus_dir": "runs/demo"
+}
