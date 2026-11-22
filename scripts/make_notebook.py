@@ -34,8 +34,8 @@ print('CUDA:', torch.cuda.is_available())
 print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')
 !nvidia-smi
 """)
-cell("markdown", "## 3. Make a SMALL, genuinely held-out retrieval benchmark\nWe use the real `vidore/docvqa_test_subsampled` dataset. This custom 50-query retrieval pool is not comparable with full ViDoRe leaderboard scores.")
-cell("code", """!python scripts/import_vidore.py --n 50 --seed 42 --out runs/vidore
+cell("markdown", "## 3. Make a SMALL, genuinely held-out retrieval benchmark\nWe use the real `vidore/docvqa_test_subsampled` dataset. This custom 100-query retrieval pool (more queries than the original 50, for tighter confidence intervals) is not comparable with full ViDoRe leaderboard scores.")
+cell("code", """!python scripts/import_vidore.py --n 100 --seed 42 --out runs/vidore
 import json
 from pathlib import Path
 print(json.loads(Path('runs/vidore/metadata.json').read_text()))
@@ -57,19 +57,12 @@ for i,r in enumerate(records):
 (folder/'corpus.json').write_text(json.dumps(records,ensure_ascii=False,indent=2))
 !python -m doclens.cli evaluate --queries runs/vidore/queries.json --corpus runs/vidore --mode bm25 -k 5 --out runs/vidore/bm25_results.json
 """)
-cell("markdown", "## 5. ColSmol visual embeddings (500M weights)\nFirst run downloads model. If T4 CUDA OOM: reduce sample count to 20 in step 3, restart runtime and rerun; redoing step 3 invalidates any previous metric files.")
+cell("markdown", "## 5. ColSmol visual embeddings (500M weights)\nFirst run downloads model. If T4 CUDA OOM: reduce sample count in step 3, restart runtime and rerun; redoing step 3 invalidates any previous metric files.")
 cell("code", """!python -m doclens.cli index-visual --corpus runs/vidore
-!python -m doclens.cli evaluate --queries runs/vidore/queries.json --corpus runs/vidore --mode visual -k 5 --out runs/vidore/visual_results.json
 """)
-cell("markdown", "## 6. Compare metrics on EXACTLY the same questions\nHere the metrics are actual measured numbers generated only after evaluation has succeeded.")
-cell("code", """from doclens.evaluate import paired_bootstrap_ci
-b=json.loads(Path('runs/vidore/bm25_results.json').read_text())
-v=json.loads(Path('runs/vidore/visual_results.json').read_text())
-print('BM25:',b['metrics'])
-print('Visual MaxSim:',v['metrics'])
-base=[x['ndcg@5'] for x in b['per_query']]
-visual=[x['ndcg@5'] for x in v['per_query']]
-print('Visual-minus-BM25 nDCG@5 95% paired bootstrap CI:', paired_bootstrap_ci(base,visual,iterations=2000,seed=42))
+cell("markdown", "## 6. BM25 vs visual MaxSim vs hybrid (RRF) on EXACTLY the same questions\nOne command evaluates all three modes with a single model load, and reports MRR / Recall@5 / nDCG@5 plus paired-bootstrap 95% CIs against the BM25 baseline. Numbers exist only after this cell succeeds; copy `runs/benchmark/results.md` into the README and `EXPERIMENT_LOG.md` together with the model ID, seed, and pool size.")
+cell("code", """!python -m doclens.cli benchmark --queries runs/vidore/queries.json --corpus runs/vidore --modes bm25 visual hybrid -k 5 --out runs/benchmark --seed 42
+print(Path('runs/benchmark/results.md').read_text())
 """)
 cell("markdown", "## 7. Evidence-gated document QA demonstration\nThe VLM proposes an answer; the system shows it **only** if OCR/PDF yields a unique literal line span with an actual pixel box. Otherwise it returns `Not visible in the document.`. OCR-only alignment is not semantic/visual fact verification. If this ViDoRe question cannot be matched literally, abstention is expected. Human verification remains required.")
 cell("code", """import gc

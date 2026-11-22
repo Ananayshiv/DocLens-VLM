@@ -19,18 +19,26 @@ def main():
     search_p = sub.add_parser("search", help="Retrieve pages")
     search_p.add_argument("question")
     search_p.add_argument("--corpus", default="runs/corpus")
-    search_p.add_argument("--mode", choices=["bm25", "visual"], default="bm25")
+    search_p.add_argument("--mode", choices=["bm25", "visual", "hybrid"], default="bm25")
     search_p.add_argument("-k", type=int, default=3)
     ask_p = sub.add_parser("ask", help="Answer a question on the top-ranked page with SmolVLM")
     ask_p.add_argument("question")
     ask_p.add_argument("--corpus", default="runs/corpus")
-    ask_p.add_argument("--mode", choices=["bm25", "visual"], default="visual")
+    ask_p.add_argument("--mode", choices=["bm25", "visual", "hybrid"], default="visual")
     eval_p = sub.add_parser("evaluate", help="Evaluate against page-level relevance judgments")
     eval_p.add_argument("--queries", required=True)
     eval_p.add_argument("--corpus", default="runs/corpus")
-    eval_p.add_argument("--mode", choices=["bm25", "visual"], default="bm25")
+    eval_p.add_argument("--mode", choices=["bm25", "visual", "hybrid"], default="bm25")
     eval_p.add_argument("-k", type=int, default=5)
     eval_p.add_argument("--out", default="evaluation.json")
+    bench_p = sub.add_parser("benchmark", help="Compare bm25/visual/hybrid on the same pool with paired bootstrap CIs")
+    bench_p.add_argument("--queries", required=True)
+    bench_p.add_argument("--corpus", default="runs/corpus")
+    bench_p.add_argument("--modes", nargs="+", choices=["bm25", "visual", "hybrid"],
+                         default=["bm25", "visual", "hybrid"], help="first mode is the baseline")
+    bench_p.add_argument("-k", type=int, default=5)
+    bench_p.add_argument("--out", default="runs/benchmark")
+    bench_p.add_argument("--seed", type=int, default=42)
     args = p.parse_args()
     if args.task == "ingest":
         from .corpus import ingest
@@ -48,10 +56,13 @@ def main():
         if args.mode == "bm25":
             from .search import lexical_search
             result = lexical_search(args.question, args.corpus, k=3 if args.task == "ask" else args.k)
-        else:
+        elif args.mode == "visual":
             from .vision import ColSmolRetriever, retrieve_visual
             result = retrieve_visual(args.question, args.corpus, ColSmolRetriever(),
                                      k=3 if args.task == "ask" else args.k)
+        else:
+            from .hybrid import hybrid_search
+            result = hybrid_search(args.question, args.corpus, k=3 if args.task == "ask" else args.k)
         if args.task == "search":
             print(json.dumps(result, ensure_ascii=False, indent=2))
         elif result:
@@ -64,6 +75,11 @@ def main():
         from .evaluate import run_evaluation
         result = run_evaluation(args.queries, args.corpus, args.mode, args.k, args.out)
         print(json.dumps(result["metrics"], indent=2))
+    elif args.task == "benchmark":
+        from .evaluate import run_benchmark, comparison_markdown
+        summary = run_benchmark(args.queries, args.corpus, tuple(args.modes), args.k,
+                                args.out, seed=args.seed)
+        print(comparison_markdown(summary))
 
 
 if __name__ == "__main__":

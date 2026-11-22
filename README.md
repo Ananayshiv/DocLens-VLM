@@ -4,9 +4,19 @@
 
 ![Fictional evidence-localization example](examples/fictional_notice_evidence_box.png)
 
-**Stack:** Python · PyTorch · ColPali-style MaxSim · ColSmol · SmolVLM · Tesseract OCR · BM25 · Gradio
+**Stack:** Python · PyTorch · ColPali-style MaxSim · ColSmol · SmolVLM · Tesseract OCR · BM25 · Reciprocal Rank Fusion · FastAPI · Gradio
 
-**Status:** CPU unit tests passed (56). GPU inference and real ViDoRe performance **not yet measured**. The screenshot is fictional demonstration data.
+## Results — BM25 vs visual vs hybrid retrieval
+
+| Mode | MRR | Recall@5 | nDCG@5 | ΔnDCG@5 vs BM25 (95% CI) |
+|---|---:|---:|---:|---:|
+| OCR + BM25 | *pending* | *pending* | *pending* | — |
+| Visual MaxSim (ColSmol-500M) | *pending* | *pending* | *pending* | *pending* |
+| **Hybrid (RRF)** | *pending* | *pending* | *pending* | *pending* |
+
+**Not yet measured.** These cells are filled only from `runs/benchmark/results.md` after running the T4 notebook (100 ViDoRe DocVQA queries, seed 42, `vidore/colSmol-500M`). One command produces the whole table:
+`python -m doclens.cli benchmark --queries runs/vidore/queries.json --corpus runs/vidore`.
+The screenshot below is fictional demonstration data.
 
 **Research prototype.** Reimplements *ColPali-style late interaction* (MaxSim) and builds a practical PDF/scan question-answering app using two small, pretrained vision-language models. Its goal is to evaluate when **retrieving whole page images** beats the traditional **OCR → text search** workflow.
 
@@ -26,8 +36,10 @@
 2. Build **OCR BM25** (text baseline) and **ColSmol MaxSim** (visual VLM retrieval) indexes.
 3. Ask a question in English or an Indic script; get ranked pages and scores.
 4. Optional: generate a **literal candidate answer** with the separate 500M VLM. Show it only if it matches one unique same-line OCR/PDF text span with an actual image-pixel bounding box; otherwise explicitly abstain (`Not visible in the document.`). Page/region citation is supported, **not** independently verified fact correctness.
-5. Evaluate page retrieval with MRR, Recall@5, nDCG@5, and paired bootstrap CI against a real small ViDoRe subset **after actually running the pretrained model**. Separately evaluate answer correctness, false support, false abstentions, and evidence-box IoU against human annotations.
-6. Experimental low-rank trainable token adapter and InfoNCE objective; **not trained by default**, not a claim of full VLM fine-tuning.
+5. **Hybrid retrieval:** fuse BM25 and visual MaxSim rankings with Reciprocal Rank Fusion (`--mode hybrid`), so text-heavy pages keep BM25's precision and scanned/visual pages keep MaxSim's recall.
+6. **One-command benchmark** (`doclens benchmark`) evaluates BM25, visual and hybrid on the same page pool and questions, with a single model load, and writes a results table with MRR, Recall@5, nDCG@5 and paired-bootstrap CIs against the real ViDoRe subset **after actually running the pretrained model**. Separately evaluate answer correctness, false support, false abstentions, and evidence-box IoU against human annotations.
+7. **HTTP API** (`doclens/api.py`, FastAPI): `/search` and `/ask` endpoints with the same abstention contract as the CLI; models load once and are reused across requests.
+8. Experimental low-rank trainable token adapter and InfoNCE objective; **not trained by default**, not a claim of full VLM fine-tuning.
 
 ### System
 
@@ -72,11 +84,23 @@ CLI equivalent:
 
 ```bash
 pip install -e '.[vision,evaluation,tests]'
-python scripts/import_vidore.py --n 50 --seed 42 --out runs/vidore
+python scripts/import_vidore.py --n 100 --seed 42 --out runs/vidore
 # IMPORTANT: perform OCR for the BM25 baseline; see notebook Cell 4
 python -m doclens.cli index-visual --corpus runs/vidore
-python -m doclens.cli evaluate --queries runs/vidore/queries.json --corpus runs/vidore --mode visual -k 5
-python -m doclens.cli ask 'What is the deadline?' --corpus runs/your_documents --mode visual
+python -m doclens.cli benchmark --queries runs/vidore/queries.json --corpus runs/vidore -k 5 --out runs/benchmark
+python -m doclens.cli search 'What is the deadline?' --corpus runs/your_documents --mode hybrid
+python -m doclens.cli ask 'What is the deadline?' --corpus runs/your_documents --mode hybrid
+```
+
+### Serve it as an API
+
+```bash
+pip install -e '.[api,vision]'
+DOCLENS_CORPUS=runs/your_documents uvicorn doclens.api:app --port 8000
+curl -s localhost:8000/search -H 'content-type: application/json' \
+     -d '{"question": "What is the application deadline?", "mode": "hybrid", "k": 3}'
+curl -s localhost:8000/ask -H 'content-type: application/json' \
+     -d '{"question": "What is the invoice number?"}'   # grounded answer + bbox, or "Not visible in the document."
 ```
 
 Large model downloads require network access. The T4 is 16GB; one model is loaded at a time in the notebook. We have not verified its peak GPU memory usage; reduce batch/pool size if necessary.
@@ -88,6 +112,8 @@ Large model downloads require network access. The T4 is 16GB; one model is loade
 **H2:** Those gains remain under document degradations and Indian-language scripts. **Unverified; requires a separate well-labelled Indic benchmark.**
 
 **H3:** A small learned low-rank token adapter improves performance on unseen document templates. **Unverified.** `doclens/adapter.py` contains an efficient experiment primitive; it requires separate train/validation/test labels and cannot train on evaluation samples.
+
+**H4:** Reciprocal-rank fusion of BM25 and visual MaxSim beats both single retrievers on nDCG@5, because their errors differ (OCR failures vs visual-token confusion). **Unverified.** RRF uses `k=60` from Cormack et al. (SIGIR 2009) and is **not tuned** on the evaluation questions; fusion weights stay at 1:1.
 
 **Key controls:** Equal candidate page pool, equal question set and k, paired bootstrap by question, no tuning on the test split, retrieval metrics separated from grounded-answer accuracy. OCR quality is a confounder and should be reported by language and scan quality. Models can hallucinate answers even with a correct retrieved page.
 
@@ -104,7 +130,9 @@ Large model downloads require network access. The T4 is 16GB; one model is loade
 | `doclens/lexical.py` | Unicode-aware BM25 baseline |
 | `doclens/corpus.py` | PDF/image ingestion and local page rendering |
 | `doclens/generator.py` | VLM proposal followed by strictly abstaining localized text support |
-| `doclens/evaluate.py` | MRR/Recall/nDCG and paired bootstrap |
+| `doclens/evaluate.py` | MRR/Recall/nDCG, paired bootstrap, multi-mode benchmark and results table |
+| `doclens/hybrid.py` | Reciprocal Rank Fusion of BM25 and visual MaxSim (degrades to visual-only, with a warning, when no OCR text exists) |
+| `doclens/api.py` | FastAPI service: `/health`, `/search`, `/ask` |
 | `scripts/import_vidore.py` | Reproducible sampled real ViDoRe retrieval eval |
 | `notebooks/DocLens_VLM_T4.ipynb` | GPU execution walkthrough |
 | `app.py` | Gradio document assistant |
