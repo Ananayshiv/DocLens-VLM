@@ -25,8 +25,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-          # transformers 4.57.x fails to load the ColSmol processor (chat-template lookup returns None)
-          python -m pip install -e '.[vision,evaluation,tests]' 'transformers>=4.48,<4.54'
+          # transformers>=4.53 can crash while listing Hub chat templates for ColSmol
+          # (doclens.vision also falls back to a local snapshot); pin below that.
+          python -m pip install -e '.[vision,evaluation,tests]' 'transformers>=4.48,<4.53'
           python -m pip list 2>/dev/null | grep -iE '^(torch|transformers|colpali-engine|huggingface-hub) '
       - name: Load ColSmol-500M (fail fast on library incompatibilities)
         run: python -c "from doclens.vision import ColSmolRetriever; r = ColSmolRetriever(); print(r.model_id, r.encode_query('test').shape)"

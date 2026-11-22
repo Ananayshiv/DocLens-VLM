@@ -9,6 +9,23 @@ from .late_interaction import maxsim
 DEFAULT_MODEL = "vidore/colSmol-500M"
 
 
+def _load_processor(processor_cls, model_id: str):
+    """Load a processor, working around a transformers>=4.53 Hub chat-template bug.
+
+    Some transformers releases list a chat-template file on the Hub that then
+    resolves to None and crash with `TypeError: expected str, bytes or
+    os.PathLike object, not NoneType`. Loading from a local snapshot of the same
+    repository avoids the remote lookup; weights and files are identical.
+    """
+    try:
+        return processor_cls.from_pretrained(model_id)
+    except TypeError as exc:
+        if "NoneType" not in str(exc) or Path(model_id).exists():
+            raise
+        from huggingface_hub import snapshot_download
+        return processor_cls.from_pretrained(snapshot_download(model_id))
+
+
 class ColSmolRetriever:
     """GPU-backed pretrained page and query embedder; loads weights from HF on first use.
 
@@ -24,7 +41,7 @@ class ColSmolRetriever:
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         dtype = torch.float16 if self.device.startswith("cuda") else torch.float32
         self.model = ColIdefics3.from_pretrained(model_id, torch_dtype=dtype, attn_implementation="eager").to(self.device).eval()
-        self.processor = ColIdefics3Processor.from_pretrained(model_id)
+        self.processor = _load_processor(ColIdefics3Processor, model_id)
 
     @torch.inference_mode()
     def encode_image(self, image: Image.Image) -> torch.Tensor:
