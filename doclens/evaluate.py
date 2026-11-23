@@ -66,18 +66,93 @@ def evaluate_queries(queries: list[dict], search_fn, k: int = 5) -> dict:
             "caution": "Only retrieval evaluated; no evidence of answer correctness"}
 
 
+MODES = ("bm25", "visual", "hybrid")
+
+
+def make_search_fn(mode: str, corpus_dir: str, backend=None):
+    """Return search(query, k) for a mode. `backend` lets modes share one model."""
+    from .search import lexical_search
+    if mode == "bm25":
+        return lambda query, topk: lexical_search(query, corpus_dir, k=topk)
+    if mode not in MODES:
+        raise ValueError(f"Unknown mode: {mode}")
+    from .vision import ColSmolRetriever, retrieve_visual
+    backend = backend or ColSmolRetriever()
+    if mode == "visual":
+        return lambda query, topk: retrieve_visual(query, corpus_dir, backend, topk)
+    from .hybrid import hybrid_search
+    return lambda query, topk: hybrid_search(query, corpus_dir, backend, k=topk)
+
+
+def summarize_comparison(results_by_mode: dict[str, dict], baseline: str = "bm25",
+                         iterations: int = 2000, seed: int = 42) -> dict:
+    """Paired comparison of every mode against `baseline` on identical queries.
+
+    Each value is an evaluate_queries() output. Deltas are mean(mode - baseline)
+    with a 95% paired bootstrap CI resampling whole queries.
+    """
+    if baseline not in results_by_mode:
+        raise ValueError(f"Baseline {baseline!r} missing")
+    base = results_by_mode[baseline]
+    base_queries = [r["query"] for r in base["per_query"]]
+    metric_keys = list(base["metrics"])
+    table = {}
+    for mode, result in results_by_mode.items():
+        if [r["query"] for r in result["per_query"]] != base_queries:
+            raise ValueError(f"Mode {mode!r} was not evaluated on the baseline's query list")
+        row = {"metrics": dict(result["metrics"]), "delta_vs_baseline": {}}
+        if mode != baseline:
+            for key in metric_keys:
+                a = [r[key] for r in base["per_query"]]
+                b = [r[key] for r in result["per_query"]]
+                lo, hi = paired_bootstrap_ci(a, b, iterations=iterations, seed=seed)
+                row["delta_vs_baseline"][key] = {
+                    "mean": mean(b) - mean(a), "ci95": [lo, hi],
+                    "significant": lo > 0 or hi < 0}
+        table[mode] = row
+    return {"baseline": baseline, "n_queries": len(base_queries), "modes": table}
+
+
+def comparison_markdown(summary: dict) -> str:
+    modes = summary["modes"]
+    keys = list(next(iter(modes.values()))["metrics"])
+    header = "| Mode | " + " | ".join(keys) + f" | Δ{keys[-1]} vs {summary['baseline']} (95% CI) |"
+    lines = [header, "|" + "---|" * (len(keys) + 2)]
+    for mode, row in modes.items():
+        cells = [f"{row['metrics'][k]:.4f}" for k in keys]
+        d = row["delta_vs_baseline"].get(keys[-1])
+        delta = "—" if d is None else (f"{d['mean']:+.4f} [{d['ci95'][0]:+.4f}, {d['ci95'][1]:+.4f}]"
+                                       + (" *" if d["significant"] else ""))
+        lines.append(f"| {mode} | " + " | ".join(cells) + f" | {delta} |")
+    lines.append(f"\nn = {summary['n_queries']} queries; * = 95% CI excludes zero.")
+    return "\n".join(lines)
+
+
+def run_benchmark(queries_json: str, corpus_dir: str, modes=MODES, k: int = 5,
+                  out_dir: str = "runs/benchmark", iterations: int = 2000, seed: int = 42) -> dict:
+    """Evaluate all modes on the same corpus/queries with ONE shared model load."""
+    queries = json.loads(Path(queries_json).read_text(encoding="utf-8"))
+    backend = None
+    if any(m != "bm25" for m in modes):
+        from .vision import ColSmolRetriever
+        backend = ColSmolRetriever()
+    results = {}
+    for mode in modes:
+        results[mode] = evaluate_queries(queries, make_search_fn(mode, corpus_dir, backend), k=k)
+    summary = summarize_comparison(results, baseline=modes[0], iterations=iterations, seed=seed)
+    summary.update({"k": k, "corpus_dir": corpus_dir, "queries": queries_json, "seed": seed,
+                    "model_id": getattr(backend, "model_id", None)})
+    out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
+    (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out / "per_query.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out / "results.md").write_text(comparison_markdown(summary) + "\n", encoding="utf-8")
+    return summary
+
+
 def run_evaluation(queries_json: str, corpus_dir: str, mode: str,
                    k: int = 5, output: str = "evaluation.json"):
-    from .search import lexical_search
     queries = json.loads(Path(queries_json).read_text(encoding="utf-8"))
-    if mode == "bm25":
-        fn = lambda query, topk: lexical_search(query, corpus_dir, k=topk)
-    elif mode == "visual":
-        from .vision import ColSmolRetriever, retrieve_visual
-        backend = ColSmolRetriever()
-        fn = lambda query, topk: retrieve_visual(query, corpus_dir, backend, topk)
-    else:
-        raise ValueError(f"Unknown mode: {mode}")
+    fn = make_search_fn(mode, corpus_dir)
     result = evaluate_queries(queries, fn, k=k)
     result.update({"mode": mode, "k": k, "corpus_dir": corpus_dir})
     Path(output).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")

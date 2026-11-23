@@ -1,0 +1,59 @@
+name: ViDoRe benchmark (CPU)
+# BM25 vs visual MaxSim (vidore/colSmol-500M) vs hybrid RRF on 100 ViDoRe DocVQA
+# test questions, on a GitHub-hosted CPU runner. Commits runs/benchmark/* back.
+on:
+  push:
+    branches: [upgrade/2026-11-portfolio]
+    paths: ['.github/workflows/benchmark.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: System packages (Tesseract)
+        run: sudo apt-get -qq update && sudo apt-get -qq install -y tesseract-ocr tesseract-ocr-hin
+      - name: Python packages (CPU PyTorch)
+        run: |
+          python -m pip install --upgrade pip
+          # transformers>=4.53 can crash while listing Hub chat templates for ColSmol
+          # (doclens.vision also falls back to a local snapshot); pin below that.
+          # torch and torchvision are resolved together so their versions match.
+          python -m pip install --extra-index-url https://download.pytorch.org/whl/cpu \
+            -e '.[vision,evaluation,tests]' 'transformers>=4.48,<4.53' torch torchvision
+          python -m pip list 2>/dev/null | grep -iE '^(torch|torchvision|transformers|colpali-engine|huggingface-hub) '
+      - name: Load ColSmol-500M (fail fast on library incompatibilities)
+        run: python -c "from doclens.vision import ColSmolRetriever; r = ColSmolRetriever(); print(r.model_id, r.encode_query('test').shape)"
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Import 100 ViDoRe DocVQA test questions (seed 42)
+        run: python scripts/import_vidore.py --n 100 --seed 42 --out runs/vidore
+      - name: OCR every page (BM25 baseline input)
+        run: python scripts/ocr_corpus.py --corpus runs/vidore --languages eng
+      - name: Visual index with ColSmol-500M
+        run: |
+          start=$(date +%s)
+          python -m doclens.cli index-visual --corpus runs/vidore
+          echo "index seconds: $(( $(date +%s) - start ))"
+      - name: Benchmark bm25 / visual / hybrid
+        run: |
+          python -m doclens.cli benchmark --queries runs/vidore/queries.json --corpus runs/vidore \
+            --modes bm25 visual hybrid -k 5 --out runs/benchmark --seed 42
+          cp runs/vidore/metadata.json runs/benchmark/dataset_metadata.json
+          { echo "## ViDoRe DocVQA retrieval (CPU run)"; cat runs/benchmark/results.md; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit results to the branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin ${{ github.ref_name }} || true
+          git add -f runs/benchmark/results.md runs/benchmark/summary.json runs/benchmark/per_query.json runs/benchmark/dataset_metadata.json
+          git commit -m "ViDoRe benchmark results from GitHub Actions run ${{ github.run_id }}"
+          git push origin HEAD:${{ github.ref_name }}

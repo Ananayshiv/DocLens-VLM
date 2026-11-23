@@ -1,0 +1,85 @@
+{
+  "baseline": "bm25",
+  "n_queries": 100,
+  "modes": {
+    "bm25": {
+      "metrics": {
+        "mrr": 0.37733333333333335,
+        "recall@5": 0.47,
+        "ndcg@5": 0.40020130861048486
+      },
+      "delta_vs_baseline": {}
+    },
+    "visual": {
+      "metrics": {
+        "mrr": 0.6625,
+        "recall@5": 0.8,
+        "ndcg@5": 0.6972453983322445
+      },
+      "delta_vs_baseline": {
+        "mrr": {
+          "mean": 0.2851666666666666,
+          "ci95": [
+            0.2105,
+            0.3641666666666667
+          ],
+          "significant": true
+        },
+        "recall@5": {
+          "mean": 0.33000000000000007,
+          "ci95": [
+            0.24,
+            0.43
+          ],
+          "significant": true
+        },
+        "ndcg@5": {
+          "mean": 0.29704408972175966,
+          "ci95": [
+            0.22162907397084142,
+            0.37825273295223183
+          ],
+          "significant": true
+        }
+      }
+    },
+    "hybrid": {
+      "metrics": {
+        "mrr": 0.574,
+        "recall@5": 0.68,
+        "ndcg@5": 0.6004384987533432
+      },
+      "delta_vs_baseline": {
+        "mrr": {
+          "mean": 0.1966666666666666,
+          "ci95": [
+            0.13483333333333333,
+            0.26183333333333336
+          ],
+          "significant": true
+        },
+        "recall@5": {
+          "mean": 0.21000000000000008,
+          "ci95": [
+            0.13,
+            0.29
+          ],
+          "significant": true
+        },
+        "ndcg@5": {
+          "mean": 0.20023719014285835,
+          "ci95": [
+            0.141054300624837,
+            0.26312858889318425
+          ],
+          "significant": true
+        }
+      }
+    }
+  },
+  "k": 5,
+  "corpus_dir": "runs/vidore",
+  "queries": "runs/vidore/queries.json",
+  "seed": 42,
+  "model_id": "vidore/colSmol-500M"
+}

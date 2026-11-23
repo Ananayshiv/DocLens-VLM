@@ -1,0 +1,10 @@
+{
+  "dataset": "vidore/docvqa_test_subsampled",
+  "split": "test",
+  "seed": 42,
+  "requested_n": 100,
+  "n_questions": 100,
+  "n_candidate_pages": 100,
+  "evaluation": "retrieval only",
+  "warning": "subsampled candidate pool; NOT official ViDoRe leaderboard"
+}

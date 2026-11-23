@@ -37,12 +37,16 @@ def search_and_answer(question, mode, generate):
     if not (SESSION_DIR / "corpus.json").exists():
         return "Upload documents and click Index first.", None, "", {}
     try:
-        if mode == "Visual VLM (ColSmol)":
+        if mode in ("Visual VLM (ColSmol)", "Hybrid (BM25 + visual, RRF)"):
             from doclens.vision import ColSmolRetriever, build_index, retrieve_visual
             if _VISUAL is None:
                 _VISUAL = ColSmolRetriever()
             build_index(SESSION_DIR, _VISUAL)
-            results = retrieve_visual(question, SESSION_DIR, _VISUAL, k=3)
+            if mode.startswith("Hybrid"):
+                from doclens.hybrid import hybrid_search
+                results = hybrid_search(question, SESSION_DIR, _VISUAL, k=3)
+            else:
+                results = retrieve_visual(question, SESSION_DIR, _VISUAL, k=3)
         else:
             results = lexical_search(question, SESSION_DIR, k=3)
         if not results:
@@ -101,7 +105,7 @@ with gr.Blocks(title="DocLens-VLM") as demo:
     session = gr.Textbox(visible=False)
     index_button.click(import_files, inputs=[files, ocr, lang, all_pages], outputs=[index_status, session])
     question = gr.Textbox(label="Ask a question", placeholder="इस दस्तावेज़ में अंतिम तारीख क्या है? / What is the due date?")
-    mode = gr.Radio(choices=["OCR/text BM25", "Visual VLM (ColSmol)"], value="OCR/text BM25", label="Retrieval method")
+    mode = gr.Radio(choices=["OCR/text BM25", "Visual VLM (ColSmol)", "Hybrid (BM25 + visual, RRF)"], value="OCR/text BM25", label="Retrieval method")
     answer_toggle = gr.Checkbox(value=False, label="Generate answer with SmolVLM-500M (downloads pretrained model)")
     search_button = gr.Button("Find evidence and answer")
     with gr.Row():
