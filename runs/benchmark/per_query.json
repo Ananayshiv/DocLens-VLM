@@ -1,0 +1,4835 @@
+{
+  "bm25": {
+    "n_queries": 100,
+    "metrics": {
+      "mrr": 0.37733333333333335,
+      "recall@5": 0.47,
+      "ndcg@5": 0.40020130861048486
+    },
+    "per_query": [
+      {
+        "query": "What is the name of the travel agency?",
+        "gold": [
+          "70da0589718190ff9cb0"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "b9b0f908fc068a412db4",
+          "b8c12895a51af4b09e2b",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name of the company?",
+        "gold": [
+          "26140109f782fba27226"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "43c0cd2b7ec472aed027",
+          "e693917fc5aa187fb9be"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the last line on the page?",
+        "gold": [
+          "99ea1e7163c89070be10"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "e6ddc0fe9b5877e6c33e",
+          "e986c8cb5aa4d7d12d59",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is vitamin A requirement for age group 8-10 years ?",
+        "gold": [
+          "4b18d404b8d153d0d32d"
+        ],
+        "retrieved": [
+          "4b18d404b8d153d0d32d",
+          "df96e05d4a8f456f20c8",
+          "d88c4d105753806e4972",
+          "dfd96719b8195b7cd701",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the third person in CC",
+        "gold": [
+          "e7d44feccf0bdf9a1459"
+        ],
+        "retrieved": [
+          "b8e3b099f2f5c7d11ffe",
+          "b8c12895a51af4b09e2b",
+          "c8dbd70b33fee0eb9b07",
+          "47c7718b857d00bdb528",
+          "e7d44feccf0bdf9a1459"
+        ],
+        "mrr": 0.2,
+        "recall@5": 1.0,
+        "ndcg@5": 0.38685280723454163
+      },
+      {
+        "query": "To Whom is this letter addressed to?",
+        "gold": [
+          "dad587252bc2eb813853"
+        ],
+        "retrieved": [
+          "9c105bac0905d411d998",
+          "057655ed80f329e374af",
+          "b8c12895a51af4b09e2b",
+          "15b3af8c7181ae1842a5",
+          "b8e3b099f2f5c7d11ffe"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Who is the Medical Monitor or designee?",
+        "gold": [
+          "e4714fed0d5034f2e55b"
+        ],
+        "retrieved": [
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "43313370495f5f67fb9c",
+          "c8dbd70b33fee0eb9b07",
+          "9c105bac0905d411d998"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the date of the order?",
+        "gold": [
+          "0077be8867f5f8a424e3"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "9b1e014a9296e7efb8c9",
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the title on page 2?",
+        "gold": [
+          "a9454459d46fb2b09ea6"
+        ],
+        "retrieved": [
+          "e986c8cb5aa4d7d12d59",
+          "b2ce369e63a338785817",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "8004b57a58284478e663"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "what is the carcinoma(transitional cell )  of group 1 ?",
+        "gold": [
+          "227a97420505230ba457"
+        ],
+        "retrieved": [
+          "227a97420505230ba457",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "43c0cd2b7ec472aed027",
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the heading in sl.no ‘V’?",
+        "gold": [
+          "4b0277a3dca3df6b965b"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "34935ea419ff3eab64b7",
+          "df96e05d4a8f456f20c8"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Who will bring cots and EMS equipment?",
+        "gold": [
+          "e6ddc0fe9b5877e6c33e"
+        ],
+        "retrieved": [
+          "e6ddc0fe9b5877e6c33e",
+          "8004b57a58284478e663",
+          "c8dbd70b33fee0eb9b07",
+          "43313370495f5f67fb9c",
+          "9c105bac0905d411d998"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what is the designation of 'Harlan Seaworth' ?",
+        "gold": [
+          "f93653a692bc2b002ad7"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "f93653a692bc2b002ad7",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "How many countries has approved Totelle(R) dossier?",
+        "gold": [
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "retrieved": [
+          "837d7dfa00a1af8cdcb2",
+          "df96e05d4a8f456f20c8",
+          "c8dbd70b33fee0eb9b07",
+          "6fcc0b9eda971ae86ed0",
+          "241a2e31134de8a70988"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What memo is it?",
+        "gold": [
+          "fda6dbb58951081875f1"
+        ],
+        "retrieved": [
+          "fda6dbb58951081875f1",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "e986c8cb5aa4d7d12d59",
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what is the name of the university ?",
+        "gold": [
+          "b7ab4160262fae213c05"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "767bccfdd1189d4936af",
+          "19af1f10ea22e77599e0",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the date of the memorandum?",
+        "gold": [
+          "50aaaca22c9f37ddc076"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "50aaaca22c9f37ddc076",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "What type of document is this?",
+        "gold": [
+          "366cd117347c71e32072"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "ac4d5f7dfad46ff35bdb",
+          "032084958679529c6ed6",
+          "df96e05d4a8f456f20c8",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the date of the document mentioned at the top?",
+        "gold": [
+          "8004b57a58284478e663"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "df96e05d4a8f456f20c8",
+          "a0a4fb9dc5cb3f3475ff",
+          "47c7718b857d00bdb528"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is written in top of the document ?",
+        "gold": [
+          "2ef137d2945ebddb32fb"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "c8dbd70b33fee0eb9b07",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "df96e05d4a8f456f20c8"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the Manuscript number specified in the 'Title' ?",
+        "gold": [
+          "a178e081f1014e4aec6a"
+        ],
+        "retrieved": [
+          "c855245d89764f2d3132",
+          "dfd96719b8195b7cd701",
+          "b9b0f908fc068a412db4",
+          "e4714fed0d5034f2e55b",
+          "a178e081f1014e4aec6a"
+        ],
+        "mrr": 0.2,
+        "recall@5": 1.0,
+        "ndcg@5": 0.38685280723454163
+      },
+      {
+        "query": "For which brand  of soft drink is the product information provided?",
+        "gold": [
+          "37f60c1f06b630fc7a43"
+        ],
+        "retrieved": [
+          "37f60c1f06b630fc7a43",
+          "6516d5dd6d1f67a700e7",
+          "74901b3edfd46c657371",
+          "241a2e31134de8a70988",
+          "767bccfdd1189d4936af"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What do the values in the y-axis depict ?",
+        "gold": [
+          "9450ee1ebb6ac88efe69"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "a5f2679e872d74ddb18d",
+          "032084958679529c6ed6",
+          "2ef137d2945ebddb32fb",
+          "663e323c3886b447db3b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "To whom the letter is addressed?",
+        "gold": [
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "retrieved": [
+          "9c105bac0905d411d998",
+          "057655ed80f329e374af",
+          "47c7718b857d00bdb528",
+          "241a2e31134de8a70988",
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the total cost of fertilizer?",
+        "gold": [
+          "455a95f506c5cb780113"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "6eb250ecb5bcf4ebe232",
+          "032084958679529c6ed6",
+          "47c7718b857d00bdb528",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What type of report is this?",
+        "gold": [
+          "6fcc0b9eda971ae86ed0"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "fda6dbb58951081875f1",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Who is there in the first photo?",
+        "gold": [
+          "538cf477d7d7b022d316"
+        ],
+        "retrieved": [
+          "c8dbd70b33fee0eb9b07",
+          "241a2e31134de8a70988",
+          "15b3af8c7181ae1842a5",
+          "a3022be40aa5b1369b09",
+          "0e4059e1154723bf15e7"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the table number mentioned at the top centre of the page?",
+        "gold": [
+          "0e4059e1154723bf15e7"
+        ],
+        "retrieved": [
+          "032084958679529c6ed6",
+          "dfd96719b8195b7cd701",
+          "43c0cd2b7ec472aed027",
+          "e986c8cb5aa4d7d12d59",
+          "e7d44feccf0bdf9a1459"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "How much is the 'Meetings Budget' of RAISH in $?",
+        "gold": [
+          "19f926e64fc8e0651e61"
+        ],
+        "retrieved": [
+          "19f926e64fc8e0651e61",
+          "241a2e31134de8a70988",
+          "9c105bac0905d411d998",
+          "dfd96719b8195b7cd701",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the last for profit sponsor listed here?",
+        "gold": [
+          "42fc103debc1e3cf2768"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "47c7718b857d00bdb528",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "695f6feaf6a407983919"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the cost of postage ( see the postal stamp at top left)?",
+        "gold": [
+          "6cf8e0d72a81ccc0027a"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "47c7718b857d00bdb528",
+          "6eb250ecb5bcf4ebe232",
+          "ecd54f9eeb5d66cbbeb3"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the dividend payout in 2012?",
+        "gold": [
+          "b2ce369e63a338785817"
+        ],
+        "retrieved": [
+          "b2ce369e63a338785817",
+          "dfd96719b8195b7cd701",
+          "47c7718b857d00bdb528",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the underlined text?",
+        "gold": [
+          "0cc4ffbb057c865b3005"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "d4290275ead040d79c2e",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name of the memo ?",
+        "gold": [
+          "361056c0f06c488a4e37"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "fda6dbb58951081875f1",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Who are the photographers?",
+        "gold": [
+          "9c105bac0905d411d998"
+        ],
+        "retrieved": [
+          "9c105bac0905d411d998",
+          "c8dbd70b33fee0eb9b07",
+          "e693917fc5aa187fb9be",
+          "43313370495f5f67fb9c",
+          "50aaaca22c9f37ddc076"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which is the birth defects special treatment center in North Carolina?",
+        "gold": [
+          "409c8e0cfd96e9e5c04d"
+        ],
+        "retrieved": [
+          "409c8e0cfd96e9e5c04d",
+          "5350dd0aa2de85977e8f",
+          "43313370495f5f67fb9c",
+          "241a2e31134de8a70988",
+          "29b3b65fc3ee9734a1b8"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which director is the president of the 'colonial sugars company'?",
+        "gold": [
+          "294ce0ca239e23ebfc2d"
+        ],
+        "retrieved": [
+          "294ce0ca239e23ebfc2d",
+          "538cf477d7d7b022d316",
+          "e693917fc5aa187fb9be",
+          "37f60c1f06b630fc7a43",
+          "19af1f10ea22e77599e0"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What time is the lunch?",
+        "gold": [
+          "e693917fc5aa187fb9be"
+        ],
+        "retrieved": [
+          "032084958679529c6ed6",
+          "dfd96719b8195b7cd701",
+          "6eb250ecb5bcf4ebe232",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is osteoporosis corelated to?",
+        "gold": [
+          "241a2e31134de8a70988"
+        ],
+        "retrieved": [
+          "241a2e31134de8a70988",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What form of communication is used?",
+        "gold": [
+          "bd784761f0db368b6b13"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "15b3af8c7181ae1842a5",
+          "b8c12895a51af4b09e2b",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the Received date stamped?",
+        "gold": [
+          "7d81088a27845582444d"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "b003daf6ed7181531697",
+          "6fcc0b9eda971ae86ed0"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "At what intervals does FASEB Bus Service operate?",
+        "gold": [
+          "5350dd0aa2de85977e8f"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "6eb250ecb5bcf4ebe232",
+          "19af1f10ea22e77599e0",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Through her noteworthy career, what did she work as?",
+        "gold": [
+          "b003daf6ed7181531697"
+        ],
+        "retrieved": [
+          "b003daf6ed7181531697",
+          "032084958679529c6ed6",
+          "19af1f10ea22e77599e0",
+          "c8dbd70b33fee0eb9b07",
+          "e7d44feccf0bdf9a1459"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the component that needs to included?",
+        "gold": [
+          "057655ed80f329e374af"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "e986c8cb5aa4d7d12d59",
+          "b003daf6ed7181531697",
+          "057655ed80f329e374af",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "What is the fullform of AAN?",
+        "gold": [
+          "ff72af9b91a3d755c050"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59",
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Who is the holder of this curriculum vitae?",
+        "gold": [
+          "2013fc7224edc671e283"
+        ],
+        "retrieved": [
+          "43313370495f5f67fb9c",
+          "c8dbd70b33fee0eb9b07",
+          "b8c12895a51af4b09e2b",
+          "50aaaca22c9f37ddc076",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the analysis about?",
+        "gold": [
+          "bb97e26d6ace7a0a46c8"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "767bccfdd1189d4936af",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name of the city mentioned?",
+        "gold": [
+          "4003a617749c039e7f70"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "ac4d5f7dfad46ff35bdb",
+          "a3022be40aa5b1369b09",
+          "b9b0f908fc068a412db4"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which meeting is this?",
+        "gold": [
+          "ac228d2c51c2213741de"
+        ],
+        "retrieved": [
+          "e6ddc0fe9b5877e6c33e",
+          "767bccfdd1189d4936af",
+          "b8c12895a51af4b09e2b",
+          "47c7718b857d00bdb528",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the Direct account name?",
+        "gold": [
+          "6516d5dd6d1f67a700e7"
+        ],
+        "retrieved": [
+          "0077be8867f5f8a424e3",
+          "47c7718b857d00bdb528",
+          "6516d5dd6d1f67a700e7",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "What is the date mentioned at the bottom of the page?",
+        "gold": [
+          "8b12b7d54922039b4e6a"
+        ],
+        "retrieved": [
+          "032084958679529c6ed6",
+          "dfd96719b8195b7cd701",
+          "e986c8cb5aa4d7d12d59",
+          "47c7718b857d00bdb528",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the title given above the cartoon in right side of the page?",
+        "gold": [
+          "15b3af8c7181ae1842a5"
+        ],
+        "retrieved": [
+          "e986c8cb5aa4d7d12d59",
+          "dfd96719b8195b7cd701",
+          "dad587252bc2eb813853",
+          "032084958679529c6ed6",
+          "e6ddc0fe9b5877e6c33e"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which company bill is given?",
+        "gold": [
+          "f8855cf556d504d308a5"
+        ],
+        "retrieved": [
+          "9450ee1ebb6ac88efe69",
+          "43c0cd2b7ec472aed027",
+          "37f60c1f06b630fc7a43",
+          "15b3af8c7181ae1842a5",
+          "e7d44feccf0bdf9a1459"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the page number?",
+        "gold": [
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "retrieved": [
+          "e986c8cb5aa4d7d12d59",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "b2ce369e63a338785817"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the name?",
+        "gold": [
+          "b9b0f908fc068a412db4"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "How many points are there in the ‘conditions of Contract’?",
+        "gold": [
+          "b8c12895a51af4b09e2b"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "15b3af8c7181ae1842a5",
+          "0e4059e1154723bf15e7",
+          "47c7718b857d00bdb528",
+          "26140109f782fba27226"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "When did the term of this agreement commence?",
+        "gold": [
+          "b8e3b099f2f5c7d11ffe"
+        ],
+        "retrieved": [
+          "e7d44feccf0bdf9a1459",
+          "df96e05d4a8f456f20c8",
+          "b8e3b099f2f5c7d11ffe",
+          "c855245d89764f2d3132",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "What is SCGP?",
+        "gold": [
+          "43c0cd2b7ec472aed027"
+        ],
+        "retrieved": [
+          "43c0cd2b7ec472aed027",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the latency period associated with cancer?",
+        "gold": [
+          "a3022be40aa5b1369b09"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "dfd96719b8195b7cd701",
+          "47c7718b857d00bdb528",
+          "032084958679529c6ed6",
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which fiscal year's currency use is shown in the pie chart?",
+        "gold": [
+          "c855245d89764f2d3132"
+        ],
+        "retrieved": [
+          "c855245d89764f2d3132",
+          "b8c12895a51af4b09e2b",
+          "47c7718b857d00bdb528",
+          "241a2e31134de8a70988",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the ‘EXPIRATION DATE’ of the Manufacturer coupon?",
+        "gold": [
+          "34935ea419ff3eab64b7"
+        ],
+        "retrieved": [
+          "34935ea419ff3eab64b7",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "b8e3b099f2f5c7d11ffe",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the progress Report number?",
+        "gold": [
+          "d4290275ead040d79c2e"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a0a4fb9dc5cb3f3475ff",
+          "a3022be40aa5b1369b09",
+          "6fcc0b9eda971ae86ed0"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name of the company mentioned just below the logo?",
+        "gold": [
+          "47c7718b857d00bdb528"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "eda1fd6daaff1bfe7aba",
+          "e4714fed0d5034f2e55b",
+          "a178e081f1014e4aec6a"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "At what rate is Methoprene currently added to B&W's tobaccos?",
+        "gold": [
+          "9b1e014a9296e7efb8c9"
+        ],
+        "retrieved": [
+          "9b1e014a9296e7efb8c9",
+          "032084958679529c6ed6",
+          "837d7dfa00a1af8cdcb2",
+          "47c7718b857d00bdb528",
+          "dfd96719b8195b7cd701"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the location code?",
+        "gold": [
+          "ac4d5f7dfad46ff35bdb"
+        ],
+        "retrieved": [
+          "ac4d5f7dfad46ff35bdb",
+          "b9b0f908fc068a412db4",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the team leader's name?",
+        "gold": [
+          "cb9ae1f231363f5b21ee"
+        ],
+        "retrieved": [
+          "032084958679529c6ed6",
+          "dfd96719b8195b7cd701",
+          "837d7dfa00a1af8cdcb2",
+          "cb9ae1f231363f5b21ee",
+          "8004b57a58284478e663"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "By what statistical 'method' is the the data collected ?",
+        "gold": [
+          "891c4ceaf4d520213a7e"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "241a2e31134de8a70988",
+          "dfd96719b8195b7cd701",
+          "891c4ceaf4d520213a7e",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "what type of communication is this?",
+        "gold": [
+          "df96e05d4a8f456f20c8"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "fda6dbb58951081875f1",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the phone number of PINK&BLACK CORAL FACTORY?",
+        "gold": [
+          "ecd54f9eeb5d66cbbeb3"
+        ],
+        "retrieved": [
+          "ecd54f9eeb5d66cbbeb3",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a0a4fb9dc5cb3f3475ff",
+          "9c105bac0905d411d998"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who did the research on Sugar and cardiovascular disease?",
+        "gold": [
+          "c655fdfe555706bc493e"
+        ],
+        "retrieved": [
+          "c655fdfe555706bc493e",
+          "241a2e31134de8a70988",
+          "8b12b7d54922039b4e6a",
+          "e7d44feccf0bdf9a1459",
+          "b7ab4160262fae213c05"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the staff representative as per the agenda?",
+        "gold": [
+          "1bab737a7a5d55cdca4b"
+        ],
+        "retrieved": [
+          "1bab737a7a5d55cdca4b",
+          "e6ddc0fe9b5877e6c33e",
+          "eda1fd6daaff1bfe7aba",
+          "b8c12895a51af4b09e2b",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the letter in the single initial monogram based on header?",
+        "gold": [
+          "3684126328dd74767891"
+        ],
+        "retrieved": [
+          "a5f2679e872d74ddb18d",
+          "6fcc0b9eda971ae86ed0",
+          "a0a4fb9dc5cb3f3475ff",
+          "dfd96719b8195b7cd701",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Under the ' Risk/Consequence Questions', what is the heading for the first type of Risk questions?",
+        "gold": [
+          "dfd96719b8195b7cd701"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "dfd96719b8195b7cd701",
+          "fda6dbb58951081875f1",
+          "6eb250ecb5bcf4ebe232",
+          "241a2e31134de8a70988"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "In Dinner #16, what is in the cup?",
+        "gold": [
+          "aea0cbdf15c0476538be"
+        ],
+        "retrieved": [
+          "aea0cbdf15c0476538be",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "ecd54f9eeb5d66cbbeb3",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "How much is the Mean square value of the Children variation?",
+        "gold": [
+          "eb4813a78cc802db5fff"
+        ],
+        "retrieved": [
+          "eb4813a78cc802db5fff",
+          "767bccfdd1189d4936af",
+          "a5f2679e872d74ddb18d",
+          "47c7718b857d00bdb528",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which number is repeated several times on the page?",
+        "gold": [
+          "24548b8ee924499d2723"
+        ],
+        "retrieved": [
+          "241a2e31134de8a70988",
+          "b8c12895a51af4b09e2b",
+          "a0a4fb9dc5cb3f3475ff",
+          "15b3af8c7181ae1842a5",
+          "47c7718b857d00bdb528"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What type of letter is this?",
+        "gold": [
+          "7481059e7f9d00010a1a"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "057655ed80f329e374af",
+          "a3022be40aa5b1369b09",
+          "fda6dbb58951081875f1"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the date of submission?",
+        "gold": [
+          "ba0d47a66e6c51a6ac18"
+        ],
+        "retrieved": [
+          "837d7dfa00a1af8cdcb2",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "d4290275ead040d79c2e",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What time is the ‘formal presentation’?",
+        "gold": [
+          "eda1fd6daaff1bfe7aba"
+        ],
+        "retrieved": [
+          "eda1fd6daaff1bfe7aba",
+          "032084958679529c6ed6",
+          "dfd96719b8195b7cd701",
+          "837d7dfa00a1af8cdcb2",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is plotted along the x axis ?",
+        "gold": [
+          "760df625c5304c7bda98"
+        ],
+        "retrieved": [
+          "455a95f506c5cb780113",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which session is mentioned here?",
+        "gold": [
+          "29b3b65fc3ee9734a1b8"
+        ],
+        "retrieved": [
+          "e7d44feccf0bdf9a1459",
+          "767bccfdd1189d4936af",
+          "47c7718b857d00bdb528",
+          "50aaaca22c9f37ddc076",
+          "eda1fd6daaff1bfe7aba"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Whose photograph is shown at the top left side of the page ?",
+        "gold": [
+          "19af1f10ea22e77599e0"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "e6ddc0fe9b5877e6c33e",
+          "dad587252bc2eb813853",
+          "241a2e31134de8a70988",
+          "8004b57a58284478e663"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the heading?",
+        "gold": [
+          "a5f2679e872d74ddb18d"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59",
+          "34935ea419ff3eab64b7"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name written under the sponsor ‘s signature (2)?",
+        "gold": [
+          "43313370495f5f67fb9c"
+        ],
+        "retrieved": [
+          "b8e3b099f2f5c7d11ffe",
+          "032084958679529c6ed6",
+          "c8dbd70b33fee0eb9b07",
+          "dfd96719b8195b7cd701",
+          "a178e081f1014e4aec6a"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the number shown below the heading on top right corner?",
+        "gold": [
+          "cefb90aa8554894aaeeb"
+        ],
+        "retrieved": [
+          "241a2e31134de8a70988",
+          "b8c12895a51af4b09e2b",
+          "dfd96719b8195b7cd701",
+          "2ef137d2945ebddb32fb",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which company is mentioned in this document?",
+        "gold": [
+          "eaeecdd9b2307ca5a92e"
+        ],
+        "retrieved": [
+          "e7d44feccf0bdf9a1459",
+          "767bccfdd1189d4936af",
+          "43c0cd2b7ec472aed027",
+          "df96e05d4a8f456f20c8",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "what is the name of the company mentioned on the bottom left of the page ?",
+        "gold": [
+          "032084958679529c6ed6"
+        ],
+        "retrieved": [
+          "e986c8cb5aa4d7d12d59",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "b8c12895a51af4b09e2b",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "Which institute's medical advisory board meeting is mentioned here?",
+        "gold": [
+          "480df86a46042d698b9b"
+        ],
+        "retrieved": [
+          "480df86a46042d698b9b",
+          "19af1f10ea22e77599e0",
+          "538cf477d7d7b022d316",
+          "e7d44feccf0bdf9a1459",
+          "fda6dbb58951081875f1"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the heading of the document?",
+        "gold": [
+          "695f6feaf6a407983919"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "df96e05d4a8f456f20c8",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the page no mentioned in this document?",
+        "gold": [
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "df96e05d4a8f456f20c8",
+          "a3022be40aa5b1369b09",
+          "b8c12895a51af4b09e2b",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the title of the research project?",
+        "gold": [
+          "767bccfdd1189d4936af"
+        ],
+        "retrieved": [
+          "767bccfdd1189d4936af",
+          "dfd96719b8195b7cd701",
+          "9b1e014a9296e7efb8c9",
+          "837d7dfa00a1af8cdcb2",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Where is ‘Spreckels’ newest processing plant’?",
+        "gold": [
+          "e0bbe6e557cc8a448a64"
+        ],
+        "retrieved": [
+          "538cf477d7d7b022d316",
+          "663e323c3886b447db3b",
+          "a0a4fb9dc5cb3f3475ff",
+          "241a2e31134de8a70988",
+          "47c7718b857d00bdb528"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Whose contact is given at the end?",
+        "gold": [
+          "74901b3edfd46c657371"
+        ],
+        "retrieved": [
+          "47c7718b857d00bdb528",
+          "0077be8867f5f8a424e3",
+          "9450ee1ebb6ac88efe69",
+          "e7d44feccf0bdf9a1459",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the RDA for Calories for Sedentary woman(1948 report)?",
+        "gold": [
+          "bc18d34244a2fee8b5c0"
+        ],
+        "retrieved": [
+          "bc18d34244a2fee8b5c0",
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which cigarette brand beats Marlboro lights?",
+        "gold": [
+          "663e323c3886b447db3b"
+        ],
+        "retrieved": [
+          "663e323c3886b447db3b",
+          "e7d44feccf0bdf9a1459",
+          "74901b3edfd46c657371",
+          "d6c835661cecbbb2eb9e",
+          "6516d5dd6d1f67a700e7"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the Dealer?",
+        "gold": [
+          "fa791841ad5b7db22533"
+        ],
+        "retrieved": [
+          "c8dbd70b33fee0eb9b07",
+          "fa791841ad5b7db22533",
+          "9c105bac0905d411d998",
+          "e693917fc5aa187fb9be",
+          "43313370495f5f67fb9c"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the figure number?",
+        "gold": [
+          "d88c4d105753806e4972"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "d88c4d105753806e4972",
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "what is the index of shared of the 21-25 segment",
+        "gold": [
+          "d6c835661cecbbb2eb9e"
+        ],
+        "retrieved": [
+          "d6c835661cecbbb2eb9e",
+          "2ef137d2945ebddb32fb",
+          "dfd96719b8195b7cd701",
+          "b2ce369e63a338785817",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the winner of the 1978 Christopher Book award?",
+        "gold": [
+          "c8dbd70b33fee0eb9b07"
+        ],
+        "retrieved": [
+          "c8dbd70b33fee0eb9b07",
+          "2013fc7224edc671e283",
+          "9c105bac0905d411d998",
+          "43313370495f5f67fb9c",
+          "e693917fc5aa187fb9be"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the name of the magazine mentioned at the top left of the page?",
+        "gold": [
+          "04121aada11b5e2c1ea7"
+        ],
+        "retrieved": [
+          "032084958679529c6ed6",
+          "dfd96719b8195b7cd701",
+          "e986c8cb5aa4d7d12d59",
+          "b8c12895a51af4b09e2b",
+          "e7d44feccf0bdf9a1459"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      }
+    ],
+    "caution": "Only retrieval evaluated; no evidence of answer correctness"
+  },
+  "visual": {
+    "n_queries": 100,
+    "metrics": {
+      "mrr": 0.6625,
+      "recall@5": 0.8,
+      "ndcg@5": 0.6972453983322445
+    },
+    "per_query": [
+      {
+        "query": "What is the name of the travel agency?",
+        "gold": [
+          "70da0589718190ff9cb0"
+        ],
+        "retrieved": [
+          "70da0589718190ff9cb0",
+          "ecd54f9eeb5d66cbbeb3",
+          "4003a617749c039e7f70",
+          "2013fc7224edc671e283",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the name of the company?",
+        "gold": [
+          "26140109f782fba27226"
+        ],
+        "retrieved": [
+          "eaeecdd9b2307ca5a92e",
+          "42fc103debc1e3cf2768",
+          "cb9ae1f231363f5b21ee",
+          "3684126328dd74767891",
+          "4003a617749c039e7f70"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the last line on the page?",
+        "gold": [
+          "99ea1e7163c89070be10"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "c655fdfe555706bc493e",
+          "a3022be40aa5b1369b09",
+          "cefb90aa8554894aaeeb",
+          "aea0cbdf15c0476538be"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is vitamin A requirement for age group 8-10 years ?",
+        "gold": [
+          "4b18d404b8d153d0d32d"
+        ],
+        "retrieved": [
+          "4b18d404b8d153d0d32d",
+          "d88c4d105753806e4972",
+          "bc18d34244a2fee8b5c0",
+          "cefb90aa8554894aaeeb",
+          "1bab737a7a5d55cdca4b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the third person in CC",
+        "gold": [
+          "e7d44feccf0bdf9a1459"
+        ],
+        "retrieved": [
+          "9b1e014a9296e7efb8c9",
+          "a178e081f1014e4aec6a",
+          "e7d44feccf0bdf9a1459",
+          "cb9ae1f231363f5b21ee",
+          "e4714fed0d5034f2e55b"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "To Whom is this letter addressed to?",
+        "gold": [
+          "dad587252bc2eb813853"
+        ],
+        "retrieved": [
+          "bd784761f0db368b6b13",
+          "e0bbe6e557cc8a448a64",
+          "7481059e7f9d00010a1a",
+          "dad587252bc2eb813853",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "Who is the Medical Monitor or designee?",
+        "gold": [
+          "e4714fed0d5034f2e55b"
+        ],
+        "retrieved": [
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "bd784761f0db368b6b13",
+          "ba0d47a66e6c51a6ac18",
+          "ac228d2c51c2213741de"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the date of the order?",
+        "gold": [
+          "0077be8867f5f8a424e3"
+        ],
+        "retrieved": [
+          "fa791841ad5b7db22533",
+          "0077be8867f5f8a424e3",
+          "6516d5dd6d1f67a700e7",
+          "2ef137d2945ebddb32fb",
+          "ba0d47a66e6c51a6ac18"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the title on page 2?",
+        "gold": [
+          "a9454459d46fb2b09ea6"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "a9454459d46fb2b09ea6",
+          "e986c8cb5aa4d7d12d59",
+          "0e4059e1154723bf15e7",
+          "d4290275ead040d79c2e"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "what is the carcinoma(transitional cell )  of group 1 ?",
+        "gold": [
+          "227a97420505230ba457"
+        ],
+        "retrieved": [
+          "227a97420505230ba457",
+          "b7ab4160262fae213c05",
+          "d4290275ead040d79c2e",
+          "c655fdfe555706bc493e",
+          "e4714fed0d5034f2e55b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the heading in sl.no ‘V’?",
+        "gold": [
+          "4b0277a3dca3df6b965b"
+        ],
+        "retrieved": [
+          "ff72af9b91a3d755c050",
+          "4b0277a3dca3df6b965b",
+          "4003a617749c039e7f70",
+          "ac4d5f7dfad46ff35bdb",
+          "e7d44feccf0bdf9a1459"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "Who will bring cots and EMS equipment?",
+        "gold": [
+          "e6ddc0fe9b5877e6c33e"
+        ],
+        "retrieved": [
+          "e6ddc0fe9b5877e6c33e",
+          "42fc103debc1e3cf2768",
+          "8004b57a58284478e663",
+          "455a95f506c5cb780113",
+          "5350dd0aa2de85977e8f"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what is the designation of 'Harlan Seaworth' ?",
+        "gold": [
+          "f93653a692bc2b002ad7"
+        ],
+        "retrieved": [
+          "f93653a692bc2b002ad7",
+          "43313370495f5f67fb9c",
+          "29b3b65fc3ee9734a1b8",
+          "9c105bac0905d411d998",
+          "19af1f10ea22e77599e0"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "How many countries has approved Totelle(R) dossier?",
+        "gold": [
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "retrieved": [
+          "837d7dfa00a1af8cdcb2",
+          "6fcc0b9eda971ae86ed0",
+          "15b3af8c7181ae1842a5",
+          "cb9ae1f231363f5b21ee",
+          "34935ea419ff3eab64b7"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What memo is it?",
+        "gold": [
+          "fda6dbb58951081875f1"
+        ],
+        "retrieved": [
+          "fda6dbb58951081875f1",
+          "361056c0f06c488a4e37",
+          "df96e05d4a8f456f20c8",
+          "50aaaca22c9f37ddc076",
+          "480df86a46042d698b9b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what is the name of the university ?",
+        "gold": [
+          "b7ab4160262fae213c05"
+        ],
+        "retrieved": [
+          "dad587252bc2eb813853",
+          "7481059e7f9d00010a1a",
+          "b7ab4160262fae213c05",
+          "2013fc7224edc671e283",
+          "f93653a692bc2b002ad7"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "What is the date of the memorandum?",
+        "gold": [
+          "50aaaca22c9f37ddc076"
+        ],
+        "retrieved": [
+          "df96e05d4a8f456f20c8",
+          "50aaaca22c9f37ddc076",
+          "361056c0f06c488a4e37",
+          "fda6dbb58951081875f1",
+          "bd784761f0db368b6b13"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What type of document is this?",
+        "gold": [
+          "366cd117347c71e32072"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "4003a617749c039e7f70",
+          "aea0cbdf15c0476538be",
+          "b8e3b099f2f5c7d11ffe",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the date of the document mentioned at the top?",
+        "gold": [
+          "8004b57a58284478e663"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "b8e3b099f2f5c7d11ffe",
+          "9b1e014a9296e7efb8c9",
+          "b8c12895a51af4b09e2b",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is written in top of the document ?",
+        "gold": [
+          "2ef137d2945ebddb32fb"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "aea0cbdf15c0476538be",
+          "b8e3b099f2f5c7d11ffe",
+          "eaeecdd9b2307ca5a92e",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the Manuscript number specified in the 'Title' ?",
+        "gold": [
+          "a178e081f1014e4aec6a"
+        ],
+        "retrieved": [
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "9b1e014a9296e7efb8c9",
+          "767bccfdd1189d4936af",
+          "ac228d2c51c2213741de"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "For which brand  of soft drink is the product information provided?",
+        "gold": [
+          "37f60c1f06b630fc7a43"
+        ],
+        "retrieved": [
+          "37f60c1f06b630fc7a43",
+          "34935ea419ff3eab64b7",
+          "bb97e26d6ace7a0a46c8",
+          "eda1fd6daaff1bfe7aba",
+          "cefb90aa8554894aaeeb"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What do the values in the y-axis depict ?",
+        "gold": [
+          "9450ee1ebb6ac88efe69"
+        ],
+        "retrieved": [
+          "760df625c5304c7bda98",
+          "d88c4d105753806e4972",
+          "9450ee1ebb6ac88efe69",
+          "b2ce369e63a338785817",
+          "cefb90aa8554894aaeeb"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "To whom the letter is addressed?",
+        "gold": [
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "retrieved": [
+          "bd784761f0db368b6b13",
+          "7481059e7f9d00010a1a",
+          "e0bbe6e557cc8a448a64",
+          "2ef137d2945ebddb32fb",
+          "366cd117347c71e32072"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the total cost of fertilizer?",
+        "gold": [
+          "455a95f506c5cb780113"
+        ],
+        "retrieved": [
+          "455a95f506c5cb780113",
+          "6516d5dd6d1f67a700e7",
+          "dfd96719b8195b7cd701",
+          "eda1fd6daaff1bfe7aba",
+          "e6ddc0fe9b5877e6c33e"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What type of report is this?",
+        "gold": [
+          "6fcc0b9eda971ae86ed0"
+        ],
+        "retrieved": [
+          "d4290275ead040d79c2e",
+          "c855245d89764f2d3132",
+          "a0a4fb9dc5cb3f3475ff",
+          "6fcc0b9eda971ae86ed0",
+          "bb97e26d6ace7a0a46c8"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "Who is there in the first photo?",
+        "gold": [
+          "538cf477d7d7b022d316"
+        ],
+        "retrieved": [
+          "9c105bac0905d411d998",
+          "538cf477d7d7b022d316",
+          "c8dbd70b33fee0eb9b07",
+          "04121aada11b5e2c1ea7",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the table number mentioned at the top centre of the page?",
+        "gold": [
+          "0e4059e1154723bf15e7"
+        ],
+        "retrieved": [
+          "0e4059e1154723bf15e7",
+          "891c4ceaf4d520213a7e",
+          "eb4813a78cc802db5fff",
+          "bc18d34244a2fee8b5c0",
+          "227a97420505230ba457"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "How much is the 'Meetings Budget' of RAISH in $?",
+        "gold": [
+          "19f926e64fc8e0651e61"
+        ],
+        "retrieved": [
+          "19f926e64fc8e0651e61",
+          "241a2e31134de8a70988",
+          "837d7dfa00a1af8cdcb2",
+          "42fc103debc1e3cf2768",
+          "e6ddc0fe9b5877e6c33e"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the last for profit sponsor listed here?",
+        "gold": [
+          "42fc103debc1e3cf2768"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "15b3af8c7181ae1842a5",
+          "43313370495f5f67fb9c"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the cost of postage ( see the postal stamp at top left)?",
+        "gold": [
+          "6cf8e0d72a81ccc0027a"
+        ],
+        "retrieved": [
+          "6cf8e0d72a81ccc0027a",
+          "e0bbe6e557cc8a448a64",
+          "dad587252bc2eb813853",
+          "eaeecdd9b2307ca5a92e",
+          "0cc4ffbb057c865b3005"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the dividend payout in 2012?",
+        "gold": [
+          "b2ce369e63a338785817"
+        ],
+        "retrieved": [
+          "b2ce369e63a338785817",
+          "c855245d89764f2d3132",
+          "b8e3b099f2f5c7d11ffe",
+          "42fc103debc1e3cf2768",
+          "47c7718b857d00bdb528"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the underlined text?",
+        "gold": [
+          "0cc4ffbb057c865b3005"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "aea0cbdf15c0476538be",
+          "e986c8cb5aa4d7d12d59",
+          "a5f2679e872d74ddb18d",
+          "34935ea419ff3eab64b7"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name of the memo ?",
+        "gold": [
+          "361056c0f06c488a4e37"
+        ],
+        "retrieved": [
+          "fda6dbb58951081875f1",
+          "361056c0f06c488a4e37",
+          "50aaaca22c9f37ddc076",
+          "480df86a46042d698b9b",
+          "5350dd0aa2de85977e8f"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "Who are the photographers?",
+        "gold": [
+          "9c105bac0905d411d998"
+        ],
+        "retrieved": [
+          "9c105bac0905d411d998",
+          "eda1fd6daaff1bfe7aba",
+          "538cf477d7d7b022d316",
+          "19af1f10ea22e77599e0",
+          "04121aada11b5e2c1ea7"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which is the birth defects special treatment center in North Carolina?",
+        "gold": [
+          "409c8e0cfd96e9e5c04d"
+        ],
+        "retrieved": [
+          "409c8e0cfd96e9e5c04d",
+          "29b3b65fc3ee9734a1b8",
+          "43313370495f5f67fb9c",
+          "b9b0f908fc068a412db4",
+          "f93653a692bc2b002ad7"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which director is the president of the 'colonial sugars company'?",
+        "gold": [
+          "294ce0ca239e23ebfc2d"
+        ],
+        "retrieved": [
+          "294ce0ca239e23ebfc2d",
+          "f93653a692bc2b002ad7",
+          "538cf477d7d7b022d316",
+          "8b12b7d54922039b4e6a",
+          "e0bbe6e557cc8a448a64"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What time is the lunch?",
+        "gold": [
+          "e693917fc5aa187fb9be"
+        ],
+        "retrieved": [
+          "6eb250ecb5bcf4ebe232",
+          "ac228d2c51c2213741de",
+          "e693917fc5aa187fb9be",
+          "ecd54f9eeb5d66cbbeb3",
+          "1bab737a7a5d55cdca4b"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "What is osteoporosis corelated to?",
+        "gold": [
+          "241a2e31134de8a70988"
+        ],
+        "retrieved": [
+          "241a2e31134de8a70988",
+          "15b3af8c7181ae1842a5",
+          "0e4059e1154723bf15e7",
+          "663e323c3886b447db3b",
+          "c655fdfe555706bc493e"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What form of communication is used?",
+        "gold": [
+          "bd784761f0db368b6b13"
+        ],
+        "retrieved": [
+          "361056c0f06c488a4e37",
+          "50aaaca22c9f37ddc076",
+          "df96e05d4a8f456f20c8",
+          "a0a4fb9dc5cb3f3475ff",
+          "ba0d47a66e6c51a6ac18"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the Received date stamped?",
+        "gold": [
+          "7d81088a27845582444d"
+        ],
+        "retrieved": [
+          "7d81088a27845582444d",
+          "6cf8e0d72a81ccc0027a",
+          "99ea1e7163c89070be10",
+          "e0bbe6e557cc8a448a64",
+          "df96e05d4a8f456f20c8"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "At what intervals does FASEB Bus Service operate?",
+        "gold": [
+          "5350dd0aa2de85977e8f"
+        ],
+        "retrieved": [
+          "5350dd0aa2de85977e8f",
+          "8004b57a58284478e663",
+          "b2ce369e63a338785817",
+          "0077be8867f5f8a424e3",
+          "ecd54f9eeb5d66cbbeb3"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Through her noteworthy career, what did she work as?",
+        "gold": [
+          "b003daf6ed7181531697"
+        ],
+        "retrieved": [
+          "b003daf6ed7181531697",
+          "19af1f10ea22e77599e0",
+          "538cf477d7d7b022d316",
+          "2013fc7224edc671e283",
+          "c8dbd70b33fee0eb9b07"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the component that needs to included?",
+        "gold": [
+          "057655ed80f329e374af"
+        ],
+        "retrieved": [
+          "057655ed80f329e374af",
+          "37f60c1f06b630fc7a43",
+          "0e4059e1154723bf15e7",
+          "47c7718b857d00bdb528",
+          "b8e3b099f2f5c7d11ffe"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the fullform of AAN?",
+        "gold": [
+          "ff72af9b91a3d755c050"
+        ],
+        "retrieved": [
+          "ff72af9b91a3d755c050",
+          "e6ddc0fe9b5877e6c33e",
+          "ac228d2c51c2213741de",
+          "43313370495f5f67fb9c",
+          "70da0589718190ff9cb0"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the holder of this curriculum vitae?",
+        "gold": [
+          "2013fc7224edc671e283"
+        ],
+        "retrieved": [
+          "2013fc7224edc671e283",
+          "43313370495f5f67fb9c",
+          "5350dd0aa2de85977e8f",
+          "42fc103debc1e3cf2768",
+          "ac4d5f7dfad46ff35bdb"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the analysis about?",
+        "gold": [
+          "bb97e26d6ace7a0a46c8"
+        ],
+        "retrieved": [
+          "bb97e26d6ace7a0a46c8",
+          "eb4813a78cc802db5fff",
+          "2013fc7224edc671e283",
+          "42fc103debc1e3cf2768",
+          "aea0cbdf15c0476538be"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the name of the city mentioned?",
+        "gold": [
+          "4003a617749c039e7f70"
+        ],
+        "retrieved": [
+          "6cf8e0d72a81ccc0027a",
+          "e0bbe6e557cc8a448a64",
+          "663e323c3886b447db3b",
+          "409c8e0cfd96e9e5c04d",
+          "f8855cf556d504d308a5"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which meeting is this?",
+        "gold": [
+          "ac228d2c51c2213741de"
+        ],
+        "retrieved": [
+          "480df86a46042d698b9b",
+          "ac228d2c51c2213741de",
+          "ff72af9b91a3d755c050",
+          "50aaaca22c9f37ddc076",
+          "7481059e7f9d00010a1a"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the Direct account name?",
+        "gold": [
+          "6516d5dd6d1f67a700e7"
+        ],
+        "retrieved": [
+          "6516d5dd6d1f67a700e7",
+          "0077be8867f5f8a424e3",
+          "b8c12895a51af4b09e2b",
+          "366cd117347c71e32072",
+          "294ce0ca239e23ebfc2d"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the date mentioned at the bottom of the page?",
+        "gold": [
+          "8b12b7d54922039b4e6a"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "b8c12895a51af4b09e2b",
+          "aea0cbdf15c0476538be",
+          "74901b3edfd46c657371",
+          "c655fdfe555706bc493e"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the title given above the cartoon in right side of the page?",
+        "gold": [
+          "15b3af8c7181ae1842a5"
+        ],
+        "retrieved": [
+          "aea0cbdf15c0476538be",
+          "24548b8ee924499d2723",
+          "b003daf6ed7181531697",
+          "9c105bac0905d411d998",
+          "663e323c3886b447db3b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which company bill is given?",
+        "gold": [
+          "f8855cf556d504d308a5"
+        ],
+        "retrieved": [
+          "15b3af8c7181ae1842a5",
+          "f8855cf556d504d308a5",
+          "d6c835661cecbbb2eb9e",
+          "bd784761f0db368b6b13",
+          "6fcc0b9eda971ae86ed0"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the page number?",
+        "gold": [
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "aea0cbdf15c0476538be",
+          "b8c12895a51af4b09e2b",
+          "e986c8cb5aa4d7d12d59",
+          "4003a617749c039e7f70"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "What is the name?",
+        "gold": [
+          "b9b0f908fc068a412db4"
+        ],
+        "retrieved": [
+          "ac4d5f7dfad46ff35bdb",
+          "409c8e0cfd96e9e5c04d",
+          "4003a617749c039e7f70",
+          "b9b0f908fc068a412db4",
+          "6cf8e0d72a81ccc0027a"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "How many points are there in the ‘conditions of Contract’?",
+        "gold": [
+          "b8c12895a51af4b09e2b"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "df96e05d4a8f456f20c8",
+          "cb9ae1f231363f5b21ee",
+          "b8e3b099f2f5c7d11ffe",
+          "8004b57a58284478e663"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "When did the term of this agreement commence?",
+        "gold": [
+          "b8e3b099f2f5c7d11ffe"
+        ],
+        "retrieved": [
+          "b8e3b099f2f5c7d11ffe",
+          "df96e05d4a8f456f20c8",
+          "cb9ae1f231363f5b21ee",
+          "b8c12895a51af4b09e2b",
+          "c855245d89764f2d3132"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is SCGP?",
+        "gold": [
+          "43c0cd2b7ec472aed027"
+        ],
+        "retrieved": [
+          "43c0cd2b7ec472aed027",
+          "dfd96719b8195b7cd701",
+          "b2ce369e63a338785817",
+          "e693917fc5aa187fb9be",
+          "ecd54f9eeb5d66cbbeb3"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the latency period associated with cancer?",
+        "gold": [
+          "a3022be40aa5b1369b09"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "057655ed80f329e374af",
+          "c655fdfe555706bc493e",
+          "227a97420505230ba457",
+          "b7ab4160262fae213c05"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which fiscal year's currency use is shown in the pie chart?",
+        "gold": [
+          "c855245d89764f2d3132"
+        ],
+        "retrieved": [
+          "c855245d89764f2d3132",
+          "42fc103debc1e3cf2768",
+          "26140109f782fba27226",
+          "b2ce369e63a338785817",
+          "47c7718b857d00bdb528"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the ‘EXPIRATION DATE’ of the Manufacturer coupon?",
+        "gold": [
+          "34935ea419ff3eab64b7"
+        ],
+        "retrieved": [
+          "34935ea419ff3eab64b7",
+          "b9b0f908fc068a412db4",
+          "0077be8867f5f8a424e3",
+          "6516d5dd6d1f67a700e7",
+          "3684126328dd74767891"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the progress Report number?",
+        "gold": [
+          "d4290275ead040d79c2e"
+        ],
+        "retrieved": [
+          "6fcc0b9eda971ae86ed0",
+          "d4290275ead040d79c2e",
+          "a0a4fb9dc5cb3f3475ff",
+          "767bccfdd1189d4936af",
+          "5350dd0aa2de85977e8f"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the name of the company mentioned just below the logo?",
+        "gold": [
+          "47c7718b857d00bdb528"
+        ],
+        "retrieved": [
+          "3684126328dd74767891",
+          "42fc103debc1e3cf2768",
+          "032084958679529c6ed6",
+          "4003a617749c039e7f70",
+          "aea0cbdf15c0476538be"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "At what rate is Methoprene currently added to B&W's tobaccos?",
+        "gold": [
+          "9b1e014a9296e7efb8c9"
+        ],
+        "retrieved": [
+          "9b1e014a9296e7efb8c9",
+          "74901b3edfd46c657371",
+          "6516d5dd6d1f67a700e7",
+          "663e323c3886b447db3b",
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the location code?",
+        "gold": [
+          "ac4d5f7dfad46ff35bdb"
+        ],
+        "retrieved": [
+          "ac4d5f7dfad46ff35bdb",
+          "b9b0f908fc068a412db4",
+          "366cd117347c71e32072",
+          "ecd54f9eeb5d66cbbeb3",
+          "f8855cf556d504d308a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the team leader's name?",
+        "gold": [
+          "cb9ae1f231363f5b21ee"
+        ],
+        "retrieved": [
+          "cb9ae1f231363f5b21ee",
+          "3684126328dd74767891",
+          "837d7dfa00a1af8cdcb2",
+          "8004b57a58284478e663",
+          "1bab737a7a5d55cdca4b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "By what statistical 'method' is the the data collected ?",
+        "gold": [
+          "891c4ceaf4d520213a7e"
+        ],
+        "retrieved": [
+          "891c4ceaf4d520213a7e",
+          "d88c4d105753806e4972",
+          "760df625c5304c7bda98",
+          "d6c835661cecbbb2eb9e",
+          "663e323c3886b447db3b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what type of communication is this?",
+        "gold": [
+          "df96e05d4a8f456f20c8"
+        ],
+        "retrieved": [
+          "361056c0f06c488a4e37",
+          "a0a4fb9dc5cb3f3475ff",
+          "50aaaca22c9f37ddc076",
+          "df96e05d4a8f456f20c8",
+          "bd784761f0db368b6b13"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "What is the phone number of PINK&BLACK CORAL FACTORY?",
+        "gold": [
+          "ecd54f9eeb5d66cbbeb3"
+        ],
+        "retrieved": [
+          "ecd54f9eeb5d66cbbeb3",
+          "bb97e26d6ace7a0a46c8",
+          "f8855cf556d504d308a5",
+          "ba0d47a66e6c51a6ac18",
+          "cb9ae1f231363f5b21ee"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who did the research on Sugar and cardiovascular disease?",
+        "gold": [
+          "c655fdfe555706bc493e"
+        ],
+        "retrieved": [
+          "c655fdfe555706bc493e",
+          "fda6dbb58951081875f1",
+          "241a2e31134de8a70988",
+          "8b12b7d54922039b4e6a",
+          "b7ab4160262fae213c05"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the staff representative as per the agenda?",
+        "gold": [
+          "1bab737a7a5d55cdca4b"
+        ],
+        "retrieved": [
+          "1bab737a7a5d55cdca4b",
+          "eda1fd6daaff1bfe7aba",
+          "6eb250ecb5bcf4ebe232",
+          "409c8e0cfd96e9e5c04d",
+          "e693917fc5aa187fb9be"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the letter in the single initial monogram based on header?",
+        "gold": [
+          "3684126328dd74767891"
+        ],
+        "retrieved": [
+          "bd784761f0db368b6b13",
+          "4003a617749c039e7f70",
+          "e7d44feccf0bdf9a1459",
+          "dad587252bc2eb813853",
+          "0cc4ffbb057c865b3005"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Under the ' Risk/Consequence Questions', what is the heading for the first type of Risk questions?",
+        "gold": [
+          "dfd96719b8195b7cd701"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "42fc103debc1e3cf2768",
+          "e693917fc5aa187fb9be",
+          "a3022be40aa5b1369b09",
+          "a5f2679e872d74ddb18d"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "In Dinner #16, what is in the cup?",
+        "gold": [
+          "aea0cbdf15c0476538be"
+        ],
+        "retrieved": [
+          "aea0cbdf15c0476538be",
+          "ecd54f9eeb5d66cbbeb3",
+          "6516d5dd6d1f67a700e7",
+          "42fc103debc1e3cf2768",
+          "b7ab4160262fae213c05"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "How much is the Mean square value of the Children variation?",
+        "gold": [
+          "eb4813a78cc802db5fff"
+        ],
+        "retrieved": [
+          "eb4813a78cc802db5fff",
+          "eaeecdd9b2307ca5a92e",
+          "a9454459d46fb2b09ea6",
+          "c655fdfe555706bc493e",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which number is repeated several times on the page?",
+        "gold": [
+          "24548b8ee924499d2723"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "aea0cbdf15c0476538be",
+          "663e323c3886b447db3b",
+          "9450ee1ebb6ac88efe69",
+          "cefb90aa8554894aaeeb"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What type of letter is this?",
+        "gold": [
+          "7481059e7f9d00010a1a"
+        ],
+        "retrieved": [
+          "7481059e7f9d00010a1a",
+          "bd784761f0db368b6b13",
+          "e0bbe6e557cc8a448a64",
+          "dad587252bc2eb813853",
+          "366cd117347c71e32072"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the date of submission?",
+        "gold": [
+          "ba0d47a66e6c51a6ac18"
+        ],
+        "retrieved": [
+          "ba0d47a66e6c51a6ac18",
+          "6fcc0b9eda971ae86ed0",
+          "837d7dfa00a1af8cdcb2",
+          "0077be8867f5f8a424e3",
+          "d4290275ead040d79c2e"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What time is the ‘formal presentation’?",
+        "gold": [
+          "eda1fd6daaff1bfe7aba"
+        ],
+        "retrieved": [
+          "eda1fd6daaff1bfe7aba",
+          "1bab737a7a5d55cdca4b",
+          "5350dd0aa2de85977e8f",
+          "e693917fc5aa187fb9be",
+          "ff72af9b91a3d755c050"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is plotted along the x axis ?",
+        "gold": [
+          "760df625c5304c7bda98"
+        ],
+        "retrieved": [
+          "9450ee1ebb6ac88efe69",
+          "d88c4d105753806e4972",
+          "760df625c5304c7bda98",
+          "b2ce369e63a338785817",
+          "3684126328dd74767891"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "Which session is mentioned here?",
+        "gold": [
+          "29b3b65fc3ee9734a1b8"
+        ],
+        "retrieved": [
+          "29b3b65fc3ee9734a1b8",
+          "b7ab4160262fae213c05",
+          "5350dd0aa2de85977e8f",
+          "50aaaca22c9f37ddc076",
+          "1bab737a7a5d55cdca4b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Whose photograph is shown at the top left side of the page ?",
+        "gold": [
+          "19af1f10ea22e77599e0"
+        ],
+        "retrieved": [
+          "b003daf6ed7181531697",
+          "538cf477d7d7b022d316",
+          "c8dbd70b33fee0eb9b07",
+          "9c105bac0905d411d998",
+          "aea0cbdf15c0476538be"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the heading?",
+        "gold": [
+          "a5f2679e872d74ddb18d"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "aea0cbdf15c0476538be",
+          "ac228d2c51c2213741de",
+          "9450ee1ebb6ac88efe69",
+          "eaeecdd9b2307ca5a92e"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name written under the sponsor ‘s signature (2)?",
+        "gold": [
+          "43313370495f5f67fb9c"
+        ],
+        "retrieved": [
+          "43313370495f5f67fb9c",
+          "42fc103debc1e3cf2768",
+          "e4714fed0d5034f2e55b",
+          "a178e081f1014e4aec6a",
+          "24548b8ee924499d2723"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the number shown below the heading on top right corner?",
+        "gold": [
+          "cefb90aa8554894aaeeb"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "aea0cbdf15c0476538be",
+          "9450ee1ebb6ac88efe69",
+          "d88c4d105753806e4972",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which company is mentioned in this document?",
+        "gold": [
+          "eaeecdd9b2307ca5a92e"
+        ],
+        "retrieved": [
+          "3684126328dd74767891",
+          "eaeecdd9b2307ca5a92e",
+          "42fc103debc1e3cf2768",
+          "ba0d47a66e6c51a6ac18",
+          "4003a617749c039e7f70"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "what is the name of the company mentioned on the bottom left of the page ?",
+        "gold": [
+          "032084958679529c6ed6"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "eaeecdd9b2307ca5a92e",
+          "aea0cbdf15c0476538be",
+          "4003a617749c039e7f70",
+          "3684126328dd74767891"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which institute's medical advisory board meeting is mentioned here?",
+        "gold": [
+          "480df86a46042d698b9b"
+        ],
+        "retrieved": [
+          "480df86a46042d698b9b",
+          "50aaaca22c9f37ddc076",
+          "29b3b65fc3ee9734a1b8",
+          "294ce0ca239e23ebfc2d",
+          "42fc103debc1e3cf2768"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the heading of the document?",
+        "gold": [
+          "695f6feaf6a407983919"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "aea0cbdf15c0476538be",
+          "ac228d2c51c2213741de",
+          "b8c12895a51af4b09e2b",
+          "4003a617749c039e7f70"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the page no mentioned in this document?",
+        "gold": [
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "b8c12895a51af4b09e2b",
+          "e986c8cb5aa4d7d12d59",
+          "8004b57a58284478e663",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the title of the research project?",
+        "gold": [
+          "767bccfdd1189d4936af"
+        ],
+        "retrieved": [
+          "767bccfdd1189d4936af",
+          "42fc103debc1e3cf2768",
+          "1bab737a7a5d55cdca4b",
+          "d4290275ead040d79c2e",
+          "6fcc0b9eda971ae86ed0"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Where is ‘Spreckels’ newest processing plant’?",
+        "gold": [
+          "e0bbe6e557cc8a448a64"
+        ],
+        "retrieved": [
+          "e0bbe6e557cc8a448a64",
+          "a0a4fb9dc5cb3f3475ff",
+          "bb97e26d6ace7a0a46c8",
+          "43c0cd2b7ec472aed027",
+          "695f6feaf6a407983919"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Whose contact is given at the end?",
+        "gold": [
+          "74901b3edfd46c657371"
+        ],
+        "retrieved": [
+          "74901b3edfd46c657371",
+          "0077be8867f5f8a424e3",
+          "dad587252bc2eb813853",
+          "f93653a692bc2b002ad7",
+          "4003a617749c039e7f70"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the RDA for Calories for Sedentary woman(1948 report)?",
+        "gold": [
+          "bc18d34244a2fee8b5c0"
+        ],
+        "retrieved": [
+          "bc18d34244a2fee8b5c0",
+          "37f60c1f06b630fc7a43",
+          "c655fdfe555706bc493e",
+          "19af1f10ea22e77599e0",
+          "4b18d404b8d153d0d32d"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which cigarette brand beats Marlboro lights?",
+        "gold": [
+          "663e323c3886b447db3b"
+        ],
+        "retrieved": [
+          "663e323c3886b447db3b",
+          "74901b3edfd46c657371",
+          "a0a4fb9dc5cb3f3475ff",
+          "e7d44feccf0bdf9a1459",
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the Dealer?",
+        "gold": [
+          "fa791841ad5b7db22533"
+        ],
+        "retrieved": [
+          "fa791841ad5b7db22533",
+          "42fc103debc1e3cf2768",
+          "cb9ae1f231363f5b21ee",
+          "6516d5dd6d1f67a700e7",
+          "df96e05d4a8f456f20c8"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the figure number?",
+        "gold": [
+          "d88c4d105753806e4972"
+        ],
+        "retrieved": [
+          "9450ee1ebb6ac88efe69",
+          "d88c4d105753806e4972",
+          "0e4059e1154723bf15e7",
+          "7d81088a27845582444d",
+          "aea0cbdf15c0476538be"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "what is the index of shared of the 21-25 segment",
+        "gold": [
+          "d6c835661cecbbb2eb9e"
+        ],
+        "retrieved": [
+          "d6c835661cecbbb2eb9e",
+          "695f6feaf6a407983919",
+          "15b3af8c7181ae1842a5",
+          "ecd54f9eeb5d66cbbeb3",
+          "b2ce369e63a338785817"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the winner of the 1978 Christopher Book award?",
+        "gold": [
+          "c8dbd70b33fee0eb9b07"
+        ],
+        "retrieved": [
+          "c8dbd70b33fee0eb9b07",
+          "2013fc7224edc671e283",
+          "19af1f10ea22e77599e0",
+          "43313370495f5f67fb9c",
+          "4003a617749c039e7f70"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the name of the magazine mentioned at the top left of the page?",
+        "gold": [
+          "04121aada11b5e2c1ea7"
+        ],
+        "retrieved": [
+          "9c105bac0905d411d998",
+          "c8dbd70b33fee0eb9b07",
+          "04121aada11b5e2c1ea7",
+          "99ea1e7163c89070be10",
+          "4003a617749c039e7f70"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      }
+    ],
+    "caution": "Only retrieval evaluated; no evidence of answer correctness"
+  },
+  "hybrid": {
+    "n_queries": 100,
+    "metrics": {
+      "mrr": 0.574,
+      "recall@5": 0.68,
+      "ndcg@5": 0.6004384987533432
+    },
+    "per_query": [
+      {
+        "query": "What is the name of the travel agency?",
+        "gold": [
+          "70da0589718190ff9cb0"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "70da0589718190ff9cb0",
+          "032084958679529c6ed6",
+          "ecd54f9eeb5d66cbbeb3",
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the name of the company?",
+        "gold": [
+          "26140109f782fba27226"
+        ],
+        "retrieved": [
+          "eaeecdd9b2307ca5a92e",
+          "032084958679529c6ed6",
+          "43c0cd2b7ec472aed027",
+          "e0bbe6e557cc8a448a64",
+          "cb9ae1f231363f5b21ee"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the last line on the page?",
+        "gold": [
+          "99ea1e7163c89070be10"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "032084958679529c6ed6",
+          "e986c8cb5aa4d7d12d59",
+          "c8dbd70b33fee0eb9b07",
+          "241a2e31134de8a70988"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is vitamin A requirement for age group 8-10 years ?",
+        "gold": [
+          "4b18d404b8d153d0d32d"
+        ],
+        "retrieved": [
+          "4b18d404b8d153d0d32d",
+          "d88c4d105753806e4972",
+          "cefb90aa8554894aaeeb",
+          "15b3af8c7181ae1842a5",
+          "dfd96719b8195b7cd701"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the third person in CC",
+        "gold": [
+          "e7d44feccf0bdf9a1459"
+        ],
+        "retrieved": [
+          "9b1e014a9296e7efb8c9",
+          "e7d44feccf0bdf9a1459",
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "9c105bac0905d411d998"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "To Whom is this letter addressed to?",
+        "gold": [
+          "dad587252bc2eb813853"
+        ],
+        "retrieved": [
+          "dad587252bc2eb813853",
+          "a0a4fb9dc5cb3f3475ff",
+          "8004b57a58284478e663",
+          "df96e05d4a8f456f20c8",
+          "50aaaca22c9f37ddc076"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the Medical Monitor or designee?",
+        "gold": [
+          "e4714fed0d5034f2e55b"
+        ],
+        "retrieved": [
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "15b3af8c7181ae1842a5",
+          "19af1f10ea22e77599e0",
+          "9c105bac0905d411d998"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the date of the order?",
+        "gold": [
+          "0077be8867f5f8a424e3"
+        ],
+        "retrieved": [
+          "0077be8867f5f8a424e3",
+          "837d7dfa00a1af8cdcb2",
+          "a3022be40aa5b1369b09",
+          "df96e05d4a8f456f20c8",
+          "ff72af9b91a3d755c050"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the title on page 2?",
+        "gold": [
+          "a9454459d46fb2b09ea6"
+        ],
+        "retrieved": [
+          "e986c8cb5aa4d7d12d59",
+          "b8c12895a51af4b09e2b",
+          "032084958679529c6ed6",
+          "b9b0f908fc068a412db4",
+          "eda1fd6daaff1bfe7aba"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "what is the carcinoma(transitional cell )  of group 1 ?",
+        "gold": [
+          "227a97420505230ba457"
+        ],
+        "retrieved": [
+          "227a97420505230ba457",
+          "e4714fed0d5034f2e55b",
+          "a3022be40aa5b1369b09",
+          "0e4059e1154723bf15e7",
+          "a178e081f1014e4aec6a"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the heading in sl.no ‘V’?",
+        "gold": [
+          "4b0277a3dca3df6b965b"
+        ],
+        "retrieved": [
+          "df96e05d4a8f456f20c8",
+          "4b0277a3dca3df6b965b",
+          "15b3af8c7181ae1842a5",
+          "294ce0ca239e23ebfc2d",
+          "19af1f10ea22e77599e0"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "Who will bring cots and EMS equipment?",
+        "gold": [
+          "e6ddc0fe9b5877e6c33e"
+        ],
+        "retrieved": [
+          "e6ddc0fe9b5877e6c33e",
+          "8004b57a58284478e663",
+          "455a95f506c5cb780113",
+          "5350dd0aa2de85977e8f",
+          "9c105bac0905d411d998"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what is the designation of 'Harlan Seaworth' ?",
+        "gold": [
+          "f93653a692bc2b002ad7"
+        ],
+        "retrieved": [
+          "f93653a692bc2b002ad7",
+          "032084958679529c6ed6",
+          "9c105bac0905d411d998",
+          "19af1f10ea22e77599e0",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "How many countries has approved Totelle(R) dossier?",
+        "gold": [
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "retrieved": [
+          "837d7dfa00a1af8cdcb2",
+          "6fcc0b9eda971ae86ed0",
+          "df96e05d4a8f456f20c8",
+          "241a2e31134de8a70988",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What memo is it?",
+        "gold": [
+          "fda6dbb58951081875f1"
+        ],
+        "retrieved": [
+          "fda6dbb58951081875f1",
+          "dfd96719b8195b7cd701",
+          "50aaaca22c9f37ddc076",
+          "df96e05d4a8f456f20c8",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what is the name of the university ?",
+        "gold": [
+          "b7ab4160262fae213c05"
+        ],
+        "retrieved": [
+          "767bccfdd1189d4936af",
+          "dad587252bc2eb813853",
+          "19af1f10ea22e77599e0",
+          "b7ab4160262fae213c05",
+          "e693917fc5aa187fb9be"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "What is the date of the memorandum?",
+        "gold": [
+          "50aaaca22c9f37ddc076"
+        ],
+        "retrieved": [
+          "50aaaca22c9f37ddc076",
+          "df96e05d4a8f456f20c8",
+          "a0a4fb9dc5cb3f3475ff",
+          "6eb250ecb5bcf4ebe232",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What type of document is this?",
+        "gold": [
+          "366cd117347c71e32072"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "df96e05d4a8f456f20c8",
+          "b8e3b099f2f5c7d11ffe",
+          "032084958679529c6ed6",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the date of the document mentioned at the top?",
+        "gold": [
+          "8004b57a58284478e663"
+        ],
+        "retrieved": [
+          "a0a4fb9dc5cb3f3475ff",
+          "9b1e014a9296e7efb8c9",
+          "b8c12895a51af4b09e2b",
+          "b8e3b099f2f5c7d11ffe",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is written in top of the document ?",
+        "gold": [
+          "2ef137d2945ebddb32fb"
+        ],
+        "retrieved": [
+          "b8e3b099f2f5c7d11ffe",
+          "032084958679529c6ed6",
+          "a3022be40aa5b1369b09",
+          "b8c12895a51af4b09e2b",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the Manuscript number specified in the 'Title' ?",
+        "gold": [
+          "a178e081f1014e4aec6a"
+        ],
+        "retrieved": [
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "b9b0f908fc068a412db4",
+          "9b1e014a9296e7efb8c9",
+          "ac4d5f7dfad46ff35bdb"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "For which brand  of soft drink is the product information provided?",
+        "gold": [
+          "37f60c1f06b630fc7a43"
+        ],
+        "retrieved": [
+          "37f60c1f06b630fc7a43",
+          "6516d5dd6d1f67a700e7",
+          "74901b3edfd46c657371",
+          "e7d44feccf0bdf9a1459",
+          "eda1fd6daaff1bfe7aba"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What do the values in the y-axis depict ?",
+        "gold": [
+          "9450ee1ebb6ac88efe69"
+        ],
+        "retrieved": [
+          "663e323c3886b447db3b",
+          "a5f2679e872d74ddb18d",
+          "b003daf6ed7181531697",
+          "e986c8cb5aa4d7d12d59",
+          "dfd96719b8195b7cd701"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "To whom the letter is addressed?",
+        "gold": [
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "retrieved": [
+          "a0a4fb9dc5cb3f3475ff",
+          "df96e05d4a8f456f20c8",
+          "9c105bac0905d411d998",
+          "fda6dbb58951081875f1",
+          "dad587252bc2eb813853"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the total cost of fertilizer?",
+        "gold": [
+          "455a95f506c5cb780113"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "47c7718b857d00bdb528",
+          "695f6feaf6a407983919",
+          "6516d5dd6d1f67a700e7",
+          "455a95f506c5cb780113"
+        ],
+        "mrr": 0.2,
+        "recall@5": 1.0,
+        "ndcg@5": 0.38685280723454163
+      },
+      {
+        "query": "What type of report is this?",
+        "gold": [
+          "6fcc0b9eda971ae86ed0"
+        ],
+        "retrieved": [
+          "a0a4fb9dc5cb3f3475ff",
+          "c855245d89764f2d3132",
+          "26140109f782fba27226",
+          "032084958679529c6ed6",
+          "fda6dbb58951081875f1"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Who is there in the first photo?",
+        "gold": [
+          "538cf477d7d7b022d316"
+        ],
+        "retrieved": [
+          "c8dbd70b33fee0eb9b07",
+          "9c105bac0905d411d998",
+          "538cf477d7d7b022d316",
+          "15b3af8c7181ae1842a5",
+          "19af1f10ea22e77599e0"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "What is the table number mentioned at the top centre of the page?",
+        "gold": [
+          "0e4059e1154723bf15e7"
+        ],
+        "retrieved": [
+          "227a97420505230ba457",
+          "dfd96719b8195b7cd701",
+          "eb4813a78cc802db5fff",
+          "e986c8cb5aa4d7d12d59",
+          "c855245d89764f2d3132"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "How much is the 'Meetings Budget' of RAISH in $?",
+        "gold": [
+          "19f926e64fc8e0651e61"
+        ],
+        "retrieved": [
+          "19f926e64fc8e0651e61",
+          "241a2e31134de8a70988",
+          "9c105bac0905d411d998",
+          "ff72af9b91a3d755c050",
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the last for profit sponsor listed here?",
+        "gold": [
+          "42fc103debc1e3cf2768"
+        ],
+        "retrieved": [
+          "42fc103debc1e3cf2768",
+          "695f6feaf6a407983919",
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the cost of postage ( see the postal stamp at top left)?",
+        "gold": [
+          "6cf8e0d72a81ccc0027a"
+        ],
+        "retrieved": [
+          "ecd54f9eeb5d66cbbeb3",
+          "47c7718b857d00bdb528",
+          "dfd96719b8195b7cd701",
+          "b8c12895a51af4b09e2b",
+          "9c105bac0905d411d998"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the dividend payout in 2012?",
+        "gold": [
+          "b2ce369e63a338785817"
+        ],
+        "retrieved": [
+          "b2ce369e63a338785817",
+          "47c7718b857d00bdb528",
+          "b8e3b099f2f5c7d11ffe",
+          "df96e05d4a8f456f20c8",
+          "a3022be40aa5b1369b09"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the underlined text?",
+        "gold": [
+          "0cc4ffbb057c865b3005"
+        ],
+        "retrieved": [
+          "e986c8cb5aa4d7d12d59",
+          "032084958679529c6ed6",
+          "dfd96719b8195b7cd701",
+          "a5f2679e872d74ddb18d",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name of the memo ?",
+        "gold": [
+          "361056c0f06c488a4e37"
+        ],
+        "retrieved": [
+          "fda6dbb58951081875f1",
+          "dfd96719b8195b7cd701",
+          "ac4d5f7dfad46ff35bdb",
+          "b9b0f908fc068a412db4",
+          "df96e05d4a8f456f20c8"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Who are the photographers?",
+        "gold": [
+          "9c105bac0905d411d998"
+        ],
+        "retrieved": [
+          "9c105bac0905d411d998",
+          "c8dbd70b33fee0eb9b07",
+          "43313370495f5f67fb9c",
+          "b003daf6ed7181531697",
+          "e693917fc5aa187fb9be"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which is the birth defects special treatment center in North Carolina?",
+        "gold": [
+          "409c8e0cfd96e9e5c04d"
+        ],
+        "retrieved": [
+          "409c8e0cfd96e9e5c04d",
+          "43313370495f5f67fb9c",
+          "29b3b65fc3ee9734a1b8",
+          "5350dd0aa2de85977e8f",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which director is the president of the 'colonial sugars company'?",
+        "gold": [
+          "294ce0ca239e23ebfc2d"
+        ],
+        "retrieved": [
+          "294ce0ca239e23ebfc2d",
+          "538cf477d7d7b022d316",
+          "f93653a692bc2b002ad7",
+          "e693917fc5aa187fb9be",
+          "19af1f10ea22e77599e0"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What time is the lunch?",
+        "gold": [
+          "e693917fc5aa187fb9be"
+        ],
+        "retrieved": [
+          "6eb250ecb5bcf4ebe232",
+          "ac228d2c51c2213741de",
+          "ecd54f9eeb5d66cbbeb3",
+          "e693917fc5aa187fb9be",
+          "eda1fd6daaff1bfe7aba"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "What is osteoporosis corelated to?",
+        "gold": [
+          "241a2e31134de8a70988"
+        ],
+        "retrieved": [
+          "241a2e31134de8a70988",
+          "15b3af8c7181ae1842a5",
+          "a3022be40aa5b1369b09",
+          "9c105bac0905d411d998",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What form of communication is used?",
+        "gold": [
+          "bd784761f0db368b6b13"
+        ],
+        "retrieved": [
+          "df96e05d4a8f456f20c8",
+          "dfd96719b8195b7cd701",
+          "50aaaca22c9f37ddc076",
+          "241a2e31134de8a70988",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the Received date stamped?",
+        "gold": [
+          "7d81088a27845582444d"
+        ],
+        "retrieved": [
+          "9b1e014a9296e7efb8c9",
+          "6fcc0b9eda971ae86ed0",
+          "df96e05d4a8f456f20c8",
+          "a3022be40aa5b1369b09",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "At what intervals does FASEB Bus Service operate?",
+        "gold": [
+          "5350dd0aa2de85977e8f"
+        ],
+        "retrieved": [
+          "5350dd0aa2de85977e8f",
+          "dfd96719b8195b7cd701",
+          "b9b0f908fc068a412db4",
+          "19af1f10ea22e77599e0",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Through her noteworthy career, what did she work as?",
+        "gold": [
+          "b003daf6ed7181531697"
+        ],
+        "retrieved": [
+          "b003daf6ed7181531697",
+          "19af1f10ea22e77599e0",
+          "c8dbd70b33fee0eb9b07",
+          "032084958679529c6ed6",
+          "538cf477d7d7b022d316"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the component that needs to included?",
+        "gold": [
+          "057655ed80f329e374af"
+        ],
+        "retrieved": [
+          "057655ed80f329e374af",
+          "47c7718b857d00bdb528",
+          "15b3af8c7181ae1842a5",
+          "c855245d89764f2d3132",
+          "b8e3b099f2f5c7d11ffe"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the fullform of AAN?",
+        "gold": [
+          "ff72af9b91a3d755c050"
+        ],
+        "retrieved": [
+          "ff72af9b91a3d755c050",
+          "837d7dfa00a1af8cdcb2",
+          "767bccfdd1189d4936af",
+          "e986c8cb5aa4d7d12d59",
+          "e6ddc0fe9b5877e6c33e"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the holder of this curriculum vitae?",
+        "gold": [
+          "2013fc7224edc671e283"
+        ],
+        "retrieved": [
+          "43313370495f5f67fb9c",
+          "15b3af8c7181ae1842a5",
+          "b8c12895a51af4b09e2b",
+          "b8e3b099f2f5c7d11ffe",
+          "50aaaca22c9f37ddc076"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the analysis about?",
+        "gold": [
+          "bb97e26d6ace7a0a46c8"
+        ],
+        "retrieved": [
+          "bb97e26d6ace7a0a46c8",
+          "eb4813a78cc802db5fff",
+          "15b3af8c7181ae1842a5",
+          "dfd96719b8195b7cd701",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the name of the city mentioned?",
+        "gold": [
+          "4003a617749c039e7f70"
+        ],
+        "retrieved": [
+          "ac4d5f7dfad46ff35bdb",
+          "b9b0f908fc068a412db4",
+          "663e323c3886b447db3b",
+          "50aaaca22c9f37ddc076",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which meeting is this?",
+        "gold": [
+          "ac228d2c51c2213741de"
+        ],
+        "retrieved": [
+          "50aaaca22c9f37ddc076",
+          "e6ddc0fe9b5877e6c33e",
+          "480df86a46042d698b9b",
+          "ac228d2c51c2213741de",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "What is the Direct account name?",
+        "gold": [
+          "6516d5dd6d1f67a700e7"
+        ],
+        "retrieved": [
+          "0077be8867f5f8a424e3",
+          "6516d5dd6d1f67a700e7",
+          "b8c12895a51af4b09e2b",
+          "b9b0f908fc068a412db4",
+          "47c7718b857d00bdb528"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the date mentioned at the bottom of the page?",
+        "gold": [
+          "8b12b7d54922039b4e6a"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "e986c8cb5aa4d7d12d59",
+          "e7d44feccf0bdf9a1459",
+          "032084958679529c6ed6",
+          "9b1e014a9296e7efb8c9"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the title given above the cartoon in right side of the page?",
+        "gold": [
+          "15b3af8c7181ae1842a5"
+        ],
+        "retrieved": [
+          "dad587252bc2eb813853",
+          "9450ee1ebb6ac88efe69",
+          "032084958679529c6ed6",
+          "b003daf6ed7181531697",
+          "dfd96719b8195b7cd701"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which company bill is given?",
+        "gold": [
+          "f8855cf556d504d308a5"
+        ],
+        "retrieved": [
+          "15b3af8c7181ae1842a5",
+          "e0bbe6e557cc8a448a64",
+          "eaeecdd9b2307ca5a92e",
+          "dad587252bc2eb813853",
+          "37f60c1f06b630fc7a43"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the page number?",
+        "gold": [
+          "e986c8cb5aa4d7d12d59"
+        ],
+        "retrieved": [
+          "e986c8cb5aa4d7d12d59",
+          "b8c12895a51af4b09e2b",
+          "b2ce369e63a338785817",
+          "032084958679529c6ed6",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the name?",
+        "gold": [
+          "b9b0f908fc068a412db4"
+        ],
+        "retrieved": [
+          "ac4d5f7dfad46ff35bdb",
+          "b9b0f908fc068a412db4",
+          "7d81088a27845582444d",
+          "b8c12895a51af4b09e2b",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "How many points are there in the ‘conditions of Contract’?",
+        "gold": [
+          "b8c12895a51af4b09e2b"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "cb9ae1f231363f5b21ee",
+          "26140109f782fba27226",
+          "47c7718b857d00bdb528",
+          "dfd96719b8195b7cd701"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "When did the term of this agreement commence?",
+        "gold": [
+          "b8e3b099f2f5c7d11ffe"
+        ],
+        "retrieved": [
+          "b8e3b099f2f5c7d11ffe",
+          "df96e05d4a8f456f20c8",
+          "cb9ae1f231363f5b21ee",
+          "c855245d89764f2d3132",
+          "74901b3edfd46c657371"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is SCGP?",
+        "gold": [
+          "43c0cd2b7ec472aed027"
+        ],
+        "retrieved": [
+          "43c0cd2b7ec472aed027",
+          "dfd96719b8195b7cd701",
+          "837d7dfa00a1af8cdcb2",
+          "b2ce369e63a338785817",
+          "e693917fc5aa187fb9be"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the latency period associated with cancer?",
+        "gold": [
+          "a3022be40aa5b1369b09"
+        ],
+        "retrieved": [
+          "a3022be40aa5b1369b09",
+          "c655fdfe555706bc493e",
+          "d4290275ead040d79c2e",
+          "057655ed80f329e374af",
+          "47c7718b857d00bdb528"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which fiscal year's currency use is shown in the pie chart?",
+        "gold": [
+          "c855245d89764f2d3132"
+        ],
+        "retrieved": [
+          "c855245d89764f2d3132",
+          "47c7718b857d00bdb528",
+          "26140109f782fba27226",
+          "dfd96719b8195b7cd701",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the ‘EXPIRATION DATE’ of the Manufacturer coupon?",
+        "gold": [
+          "34935ea419ff3eab64b7"
+        ],
+        "retrieved": [
+          "34935ea419ff3eab64b7",
+          "b8e3b099f2f5c7d11ffe",
+          "b003daf6ed7181531697",
+          "e4714fed0d5034f2e55b",
+          "b9b0f908fc068a412db4"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the progress Report number?",
+        "gold": [
+          "d4290275ead040d79c2e"
+        ],
+        "retrieved": [
+          "6fcc0b9eda971ae86ed0",
+          "a0a4fb9dc5cb3f3475ff",
+          "d4290275ead040d79c2e",
+          "26140109f782fba27226",
+          "dfd96719b8195b7cd701"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "What is the name of the company mentioned just below the logo?",
+        "gold": [
+          "47c7718b857d00bdb528"
+        ],
+        "retrieved": [
+          "032084958679529c6ed6",
+          "43c0cd2b7ec472aed027",
+          "eaeecdd9b2307ca5a92e",
+          "b003daf6ed7181531697",
+          "c8dbd70b33fee0eb9b07"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "At what rate is Methoprene currently added to B&W's tobaccos?",
+        "gold": [
+          "9b1e014a9296e7efb8c9"
+        ],
+        "retrieved": [
+          "9b1e014a9296e7efb8c9",
+          "837d7dfa00a1af8cdcb2",
+          "74901b3edfd46c657371",
+          "a0a4fb9dc5cb3f3475ff",
+          "dfd96719b8195b7cd701"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the location code?",
+        "gold": [
+          "ac4d5f7dfad46ff35bdb"
+        ],
+        "retrieved": [
+          "ac4d5f7dfad46ff35bdb",
+          "b9b0f908fc068a412db4",
+          "b003daf6ed7181531697",
+          "409c8e0cfd96e9e5c04d",
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the team leader's name?",
+        "gold": [
+          "cb9ae1f231363f5b21ee"
+        ],
+        "retrieved": [
+          "cb9ae1f231363f5b21ee",
+          "837d7dfa00a1af8cdcb2",
+          "8004b57a58284478e663",
+          "43c0cd2b7ec472aed027",
+          "dfd96719b8195b7cd701"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "By what statistical 'method' is the the data collected ?",
+        "gold": [
+          "891c4ceaf4d520213a7e"
+        ],
+        "retrieved": [
+          "891c4ceaf4d520213a7e",
+          "d6c835661cecbbb2eb9e",
+          "0e4059e1154723bf15e7",
+          "dfd96719b8195b7cd701",
+          "15b3af8c7181ae1842a5"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what type of communication is this?",
+        "gold": [
+          "df96e05d4a8f456f20c8"
+        ],
+        "retrieved": [
+          "fda6dbb58951081875f1",
+          "a0a4fb9dc5cb3f3475ff",
+          "dad587252bc2eb813853",
+          "df96e05d4a8f456f20c8",
+          "50aaaca22c9f37ddc076"
+        ],
+        "mrr": 0.25,
+        "recall@5": 1.0,
+        "ndcg@5": 0.43067655807339306
+      },
+      {
+        "query": "What is the phone number of PINK&BLACK CORAL FACTORY?",
+        "gold": [
+          "ecd54f9eeb5d66cbbeb3"
+        ],
+        "retrieved": [
+          "ecd54f9eeb5d66cbbeb3",
+          "a0a4fb9dc5cb3f3475ff",
+          "bb97e26d6ace7a0a46c8",
+          "9c105bac0905d411d998",
+          "0077be8867f5f8a424e3"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who did the research on Sugar and cardiovascular disease?",
+        "gold": [
+          "c655fdfe555706bc493e"
+        ],
+        "retrieved": [
+          "c655fdfe555706bc493e",
+          "241a2e31134de8a70988",
+          "8b12b7d54922039b4e6a",
+          "b7ab4160262fae213c05",
+          "538cf477d7d7b022d316"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the staff representative as per the agenda?",
+        "gold": [
+          "1bab737a7a5d55cdca4b"
+        ],
+        "retrieved": [
+          "1bab737a7a5d55cdca4b",
+          "eda1fd6daaff1bfe7aba",
+          "e6ddc0fe9b5877e6c33e",
+          "6eb250ecb5bcf4ebe232",
+          "409c8e0cfd96e9e5c04d"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the letter in the single initial monogram based on header?",
+        "gold": [
+          "3684126328dd74767891"
+        ],
+        "retrieved": [
+          "a0a4fb9dc5cb3f3475ff",
+          "d6c835661cecbbb2eb9e",
+          "e7d44feccf0bdf9a1459",
+          "b003daf6ed7181531697",
+          "a5f2679e872d74ddb18d"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Under the ' Risk/Consequence Questions', what is the heading for the first type of Risk questions?",
+        "gold": [
+          "dfd96719b8195b7cd701"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "a3022be40aa5b1369b09",
+          "e693917fc5aa187fb9be",
+          "42fc103debc1e3cf2768",
+          "4b0277a3dca3df6b965b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "In Dinner #16, what is in the cup?",
+        "gold": [
+          "aea0cbdf15c0476538be"
+        ],
+        "retrieved": [
+          "aea0cbdf15c0476538be",
+          "ecd54f9eeb5d66cbbeb3",
+          "cefb90aa8554894aaeeb",
+          "b9b0f908fc068a412db4",
+          "74901b3edfd46c657371"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "How much is the Mean square value of the Children variation?",
+        "gold": [
+          "eb4813a78cc802db5fff"
+        ],
+        "retrieved": [
+          "eb4813a78cc802db5fff",
+          "767bccfdd1189d4936af",
+          "a3022be40aa5b1369b09",
+          "eaeecdd9b2307ca5a92e",
+          "c655fdfe555706bc493e"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which number is repeated several times on the page?",
+        "gold": [
+          "24548b8ee924499d2723"
+        ],
+        "retrieved": [
+          "15b3af8c7181ae1842a5",
+          "c8dbd70b33fee0eb9b07",
+          "241a2e31134de8a70988",
+          "e986c8cb5aa4d7d12d59",
+          "a0a4fb9dc5cb3f3475ff"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What type of letter is this?",
+        "gold": [
+          "7481059e7f9d00010a1a"
+        ],
+        "retrieved": [
+          "dad587252bc2eb813853",
+          "fda6dbb58951081875f1",
+          "a0a4fb9dc5cb3f3475ff",
+          "8004b57a58284478e663",
+          "057655ed80f329e374af"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the date of submission?",
+        "gold": [
+          "ba0d47a66e6c51a6ac18"
+        ],
+        "retrieved": [
+          "837d7dfa00a1af8cdcb2",
+          "d4290275ead040d79c2e",
+          "6fcc0b9eda971ae86ed0",
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What time is the ‘formal presentation’?",
+        "gold": [
+          "eda1fd6daaff1bfe7aba"
+        ],
+        "retrieved": [
+          "eda1fd6daaff1bfe7aba",
+          "c8dbd70b33fee0eb9b07",
+          "6eb250ecb5bcf4ebe232",
+          "43c0cd2b7ec472aed027",
+          "1bab737a7a5d55cdca4b"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is plotted along the x axis ?",
+        "gold": [
+          "760df625c5304c7bda98"
+        ],
+        "retrieved": [
+          "dfd96719b8195b7cd701",
+          "47c7718b857d00bdb528",
+          "455a95f506c5cb780113",
+          "a3022be40aa5b1369b09",
+          "241a2e31134de8a70988"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which session is mentioned here?",
+        "gold": [
+          "29b3b65fc3ee9734a1b8"
+        ],
+        "retrieved": [
+          "29b3b65fc3ee9734a1b8",
+          "b7ab4160262fae213c05",
+          "50aaaca22c9f37ddc076",
+          "43c0cd2b7ec472aed027",
+          "eda1fd6daaff1bfe7aba"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Whose photograph is shown at the top left side of the page ?",
+        "gold": [
+          "19af1f10ea22e77599e0"
+        ],
+        "retrieved": [
+          "dad587252bc2eb813853",
+          "538cf477d7d7b022d316",
+          "c8dbd70b33fee0eb9b07",
+          "b003daf6ed7181531697",
+          "19af1f10ea22e77599e0"
+        ],
+        "mrr": 0.2,
+        "recall@5": 1.0,
+        "ndcg@5": 0.38685280723454163
+      },
+      {
+        "query": "What is the heading?",
+        "gold": [
+          "a5f2679e872d74ddb18d"
+        ],
+        "retrieved": [
+          "e986c8cb5aa4d7d12d59",
+          "032084958679529c6ed6",
+          "b8c12895a51af4b09e2b",
+          "eda1fd6daaff1bfe7aba",
+          "34935ea419ff3eab64b7"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the name written under the sponsor ‘s signature (2)?",
+        "gold": [
+          "43313370495f5f67fb9c"
+        ],
+        "retrieved": [
+          "a178e081f1014e4aec6a",
+          "e4714fed0d5034f2e55b",
+          "b7ab4160262fae213c05",
+          "b8e3b099f2f5c7d11ffe",
+          "767bccfdd1189d4936af"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the number shown below the heading on top right corner?",
+        "gold": [
+          "cefb90aa8554894aaeeb"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "241a2e31134de8a70988",
+          "e986c8cb5aa4d7d12d59",
+          "eda1fd6daaff1bfe7aba",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Which company is mentioned in this document?",
+        "gold": [
+          "eaeecdd9b2307ca5a92e"
+        ],
+        "retrieved": [
+          "47c7718b857d00bdb528",
+          "43c0cd2b7ec472aed027",
+          "eaeecdd9b2307ca5a92e",
+          "cb9ae1f231363f5b21ee",
+          "b8c12895a51af4b09e2b"
+        ],
+        "mrr": 0.3333333333333333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5
+      },
+      {
+        "query": "what is the name of the company mentioned on the bottom left of the page ?",
+        "gold": [
+          "032084958679529c6ed6"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "032084958679529c6ed6",
+          "43c0cd2b7ec472aed027",
+          "eaeecdd9b2307ca5a92e",
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "Which institute's medical advisory board meeting is mentioned here?",
+        "gold": [
+          "480df86a46042d698b9b"
+        ],
+        "retrieved": [
+          "480df86a46042d698b9b",
+          "29b3b65fc3ee9734a1b8",
+          "538cf477d7d7b022d316",
+          "294ce0ca239e23ebfc2d",
+          "19af1f10ea22e77599e0"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the heading of the document?",
+        "gold": [
+          "695f6feaf6a407983919"
+        ],
+        "retrieved": [
+          "032084958679529c6ed6",
+          "b8c12895a51af4b09e2b",
+          "e986c8cb5aa4d7d12d59",
+          "a0a4fb9dc5cb3f3475ff",
+          "b8e3b099f2f5c7d11ffe"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the page no mentioned in this document?",
+        "gold": [
+          "6eb250ecb5bcf4ebe232"
+        ],
+        "retrieved": [
+          "b8c12895a51af4b09e2b",
+          "e986c8cb5aa4d7d12d59",
+          "032084958679529c6ed6",
+          "8004b57a58284478e663",
+          "e7d44feccf0bdf9a1459"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "What is the title of the research project?",
+        "gold": [
+          "767bccfdd1189d4936af"
+        ],
+        "retrieved": [
+          "767bccfdd1189d4936af",
+          "9b1e014a9296e7efb8c9",
+          "837d7dfa00a1af8cdcb2",
+          "1bab737a7a5d55cdca4b",
+          "a178e081f1014e4aec6a"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Where is ‘Spreckels’ newest processing plant’?",
+        "gold": [
+          "e0bbe6e557cc8a448a64"
+        ],
+        "retrieved": [
+          "a0a4fb9dc5cb3f3475ff",
+          "241a2e31134de8a70988",
+          "37f60c1f06b630fc7a43",
+          "47c7718b857d00bdb528",
+          "43c0cd2b7ec472aed027"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      {
+        "query": "Whose contact is given at the end?",
+        "gold": [
+          "74901b3edfd46c657371"
+        ],
+        "retrieved": [
+          "0077be8867f5f8a424e3",
+          "74901b3edfd46c657371",
+          "e7d44feccf0bdf9a1459",
+          "a0a4fb9dc5cb3f3475ff",
+          "dad587252bc2eb813853"
+        ],
+        "mrr": 0.5,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575
+      },
+      {
+        "query": "What is the RDA for Calories for Sedentary woman(1948 report)?",
+        "gold": [
+          "bc18d34244a2fee8b5c0"
+        ],
+        "retrieved": [
+          "bc18d34244a2fee8b5c0",
+          "19af1f10ea22e77599e0",
+          "37f60c1f06b630fc7a43",
+          "aea0cbdf15c0476538be",
+          "241a2e31134de8a70988"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Which cigarette brand beats Marlboro lights?",
+        "gold": [
+          "663e323c3886b447db3b"
+        ],
+        "retrieved": [
+          "663e323c3886b447db3b",
+          "74901b3edfd46c657371",
+          "e7d44feccf0bdf9a1459",
+          "a0a4fb9dc5cb3f3475ff",
+          "6516d5dd6d1f67a700e7"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the Dealer?",
+        "gold": [
+          "fa791841ad5b7db22533"
+        ],
+        "retrieved": [
+          "fa791841ad5b7db22533",
+          "df96e05d4a8f456f20c8",
+          "b8c12895a51af4b09e2b",
+          "0077be8867f5f8a424e3",
+          "032084958679529c6ed6"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the figure number?",
+        "gold": [
+          "d88c4d105753806e4972"
+        ],
+        "retrieved": [
+          "d88c4d105753806e4972",
+          "0e4059e1154723bf15e7",
+          "dfd96719b8195b7cd701",
+          "a5f2679e872d74ddb18d",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "what is the index of shared of the 21-25 segment",
+        "gold": [
+          "d6c835661cecbbb2eb9e"
+        ],
+        "retrieved": [
+          "d6c835661cecbbb2eb9e",
+          "b2ce369e63a338785817",
+          "b8c12895a51af4b09e2b",
+          "15b3af8c7181ae1842a5",
+          "837d7dfa00a1af8cdcb2"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "Who is the winner of the 1978 Christopher Book award?",
+        "gold": [
+          "c8dbd70b33fee0eb9b07"
+        ],
+        "retrieved": [
+          "c8dbd70b33fee0eb9b07",
+          "2013fc7224edc671e283",
+          "43313370495f5f67fb9c",
+          "9c105bac0905d411d998",
+          "b003daf6ed7181531697"
+        ],
+        "mrr": 1.0,
+        "recall@5": 1.0,
+        "ndcg@5": 1.0
+      },
+      {
+        "query": "What is the name of the magazine mentioned at the top left of the page?",
+        "gold": [
+          "04121aada11b5e2c1ea7"
+        ],
+        "retrieved": [
+          "c8dbd70b33fee0eb9b07",
+          "ecd54f9eeb5d66cbbeb3",
+          "19af1f10ea22e77599e0",
+          "032084958679529c6ed6",
+          "e7d44feccf0bdf9a1459"
+        ],
+        "mrr": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0
+      }
+    ],
+    "caution": "Only retrieval evaluated; no evidence of answer correctness"
+  }
+}
