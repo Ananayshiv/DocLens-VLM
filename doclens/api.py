@@ -55,7 +55,8 @@ class SearchRequest(BaseModel):
 
 class AskRequest(BaseModel):
     question: str = Field(min_length=1, max_length=2000)
-    mode: str = Field(default="hybrid", pattern="^(bm25|visual|hybrid)$")
+    # Visual-only is the default: it beat both BM25 and hybrid fusion on ViDoRe (see README).
+    mode: str = Field(default="visual", pattern="^(bm25|visual|hybrid)$")
 
 
 def _search(question: str, mode: str, k: int) -> list[dict]:

@@ -8,15 +8,16 @@
 
 ## Results — BM25 vs visual vs hybrid retrieval
 
+Measured on 100 ViDoRe DocVQA test questions over a 100-page candidate pool (`vidore/docvqa_test_subsampled`, seed 42), with `vidore/colSmol-500M` and Tesseract OCR (eng), on a CPU GitHub Actions runner ([raw results](runs/benchmark/results.md)). This is a subsampled pool, **not** the official ViDoRe leaderboard.
+
 | Mode | MRR | Recall@5 | nDCG@5 | ΔnDCG@5 vs BM25 (95% CI) |
 |---|---:|---:|---:|---:|
-| OCR + BM25 | *pending* | *pending* | *pending* | — |
-| Visual MaxSim (ColSmol-500M) | *pending* | *pending* | *pending* | *pending* |
-| **Hybrid (RRF)** | *pending* | *pending* | *pending* | *pending* |
+| OCR + BM25 | 0.377 | 0.47 | 0.400 | — |
+| **Visual MaxSim (ColSmol-500M)** | **0.663** | **0.80** | **0.697** | **+0.297 [+0.222, +0.378]** |
+| Hybrid (RRF, k=60, 1:1) | 0.574 | 0.68 | 0.600 | +0.200 [+0.141, +0.263] |
 
-**Not yet measured.** These cells are filled only from `runs/benchmark/results.md` after running the T4 notebook (100 ViDoRe DocVQA queries, seed 42, `vidore/colSmol-500M`). One command produces the whole table:
-`python -m doclens.cli benchmark --queries runs/vidore/queries.json --corpus runs/vidore`.
-The screenshot below is fictional demonstration data.
+- **H1 supported on this subset:** visual late-interaction retrieval beats OCR+BM25 by +0.30 nDCG@5 (paired bootstrap, 100 queries).
+- **H4 rejected:** untuned equal-weight fusion is **worse than visual alone** (ΔnDCG@5 −0.097 [−0.168, −0.030]). The two retrievers are not complementary here: BM25 retrieves the right page in the top 5 for only **1** question that visual misses, versus **34** the other way round. Fusing in a much weaker ranking adds noise. Hybrid stays available (`--mode hybrid`), but visual is the default for answering.
 
 **Research prototype.** Reimplements *ColPali-style late interaction* (MaxSim) and builds a practical PDF/scan question-answering app using two small, pretrained vision-language models. Its goal is to evaluate when **retrieving whole page images** beats the traditional **OCR → text search** workflow.
 
@@ -36,7 +37,7 @@ The screenshot below is fictional demonstration data.
 2. Build **OCR BM25** (text baseline) and **ColSmol MaxSim** (visual VLM retrieval) indexes.
 3. Ask a question in English or an Indic script; get ranked pages and scores.
 4. Optional: generate a **literal candidate answer** with the separate 500M VLM. Show it only if it matches one unique same-line OCR/PDF text span with an actual image-pixel bounding box; otherwise explicitly abstain (`Not visible in the document.`). Page/region citation is supported, **not** independently verified fact correctness.
-5. **Hybrid retrieval:** fuse BM25 and visual MaxSim rankings with Reciprocal Rank Fusion (`--mode hybrid`), so text-heavy pages keep BM25's precision and scanned/visual pages keep MaxSim's recall.
+5. **Hybrid retrieval (experimental):** fuse BM25 and visual MaxSim rankings with Reciprocal Rank Fusion (`--mode hybrid`). On the ViDoRe subset it underperforms visual-only; see Results.
 6. **One-command benchmark** (`doclens benchmark`) evaluates BM25, visual and hybrid on the same page pool and questions, with a single model load, and writes a results table with MRR, Recall@5, nDCG@5 and paired-bootstrap CIs against the real ViDoRe subset **after actually running the pretrained model**. Separately evaluate answer correctness, false support, false abstentions, and evidence-box IoU against human annotations.
 7. **HTTP API** (`doclens/api.py`, FastAPI): `/search` and `/ask` endpoints with the same abstention contract as the CLI; models load once and are reused across requests.
 8. Experimental low-rank trainable token adapter and InfoNCE objective; **not trained by default**, not a claim of full VLM fine-tuning.
@@ -107,13 +108,13 @@ Large model downloads require network access. The T4 is 16GB; one model is loade
 
 ## Evaluation & falsifiable hypotheses
 
-**H1:** Visual MaxSim retrieval improves nDCG@5 over OCR BM25 on visually challenging pages. **Unverified.**
+**H1:** Visual MaxSim retrieval improves nDCG@5 over OCR BM25 on visually challenging pages. **Supported on the 100-question ViDoRe DocVQA subset** (+0.297 nDCG@5, 95% CI [+0.222, +0.378]); not yet tested on Indic documents.
 
 **H2:** Those gains remain under document degradations and Indian-language scripts. **Unverified; requires a separate well-labelled Indic benchmark.**
 
 **H3:** A small learned low-rank token adapter improves performance on unseen document templates. **Unverified.** `doclens/adapter.py` contains an efficient experiment primitive; it requires separate train/validation/test labels and cannot train on evaluation samples.
 
-**H4:** Reciprocal-rank fusion of BM25 and visual MaxSim beats both single retrievers on nDCG@5, because their errors differ (OCR failures vs visual-token confusion). **Unverified.** RRF uses `k=60` from Cormack et al. (SIGIR 2009) and is **not tuned** on the evaluation questions; fusion weights stay at 1:1.
+**H4:** Reciprocal-rank fusion of BM25 and visual MaxSim beats both single retrievers on nDCG@5, because their errors differ (OCR failures vs visual-token confusion). **Rejected on the 100-question ViDoRe DocVQA subset:** fusion (RRF `k=60`, 1:1, untuned) is significantly worse than visual alone. Weighted fusion tuned on a *separate* dev split, or text-born PDFs where OCR is clean, remain open questions.
 
 **Key controls:** Equal candidate page pool, equal question set and k, paired bootstrap by question, no tuning on the test split, retrieval metrics separated from grounded-answer accuracy. OCR quality is a confounder and should be reported by language and scan quality. Models can hallucinate answers even with a correct retrieved page.
 

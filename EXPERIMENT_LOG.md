@@ -79,3 +79,28 @@ installed, so the remaining suites (MaxSim, evidence, corpus, adapter) were
 **Not run:** ColSmol/SmolVLM inference, ViDoRe benchmark, hybrid vs single-mode
 comparison (H4). No retrieval numbers are claimed. README table cells are
 explicitly `pending`.
+
+## 2026-11-23 — Measured: BM25 vs visual vs hybrid on ViDoRe DocVQA (CPU)
+
+**Run:** GitHub Actions run 45085271677, `ubuntu-latest` CPU runner. Dataset
+`vidore/docvqa_test_subsampled` (test), 100 questions sampled with seed 42,
+100 candidate pages (one gold page per question). Retriever
+`vidore/colSmol-500M` (fp32, CPU), Tesseract `eng` OCR for BM25 (2/100 pages
+produced no OCR text), k=5, paired bootstrap 2,000 resamples over questions,
+seed 42. Library constraint: `transformers<4.53` (newer releases crash while
+listing Hub chat templates for the ColSmol processor; `doclens.vision` now
+falls back to a local snapshot). Visual indexing took ~40 min on CPU.
+
+| Mode | MRR | Recall@5 | nDCG@5 |
+|---|---:|---:|---:|
+| bm25 | 0.3773 | 0.47 | 0.4002 |
+| visual | 0.6625 | 0.80 | 0.6972 |
+| hybrid (RRF k=60, 1:1) | 0.5740 | 0.68 | 0.6004 |
+
+visual − bm25 nDCG@5: +0.2970 [+0.2216, +0.3783]. hybrid − visual nDCG@5:
+−0.0968 [−0.1683, −0.0300]; MRR −0.0885 [−0.1602, −0.0200]; Recall@5 −0.12
+[−0.20, −0.04]. Complementarity check (Recall@5): BM25-only hits 1, visual-only
+hits 34. **Conclusion:** H1 supported on this subset; H4 rejected. No fusion
+weights were tuned on these questions. Failure analysis per question is in
+`runs/benchmark/per_query.json`. Not run: GPU timing, Indic documents,
+answer-level grounding evaluation.
